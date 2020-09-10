@@ -36,6 +36,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 * User can climb ranks while working out
 
 **Reasons**
+
 * Some atheletes depend on the athletic programs to stay in college through scholarships
 * People who lose atheletic prowess lose skills and fall out of roles which could cost them their career
 
