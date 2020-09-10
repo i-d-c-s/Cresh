@@ -1,12 +1,14 @@
 # Cresh
 
 ## Table of Contents
+
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 
 ## Overview
 ### Description
+
 Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here to help with that! Cresh is a fitness social app that automatically keeps count of regular exercises done by athletes to prevent cheating or non performace of certain work outs and to enhance social activities within the athletic community thereby furthering the growth of college atheltes around America.
 
 
@@ -21,8 +23,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
-
+### 1. User Stories (Required)
 **Required Must-have Stories**
 
 * User can Login
