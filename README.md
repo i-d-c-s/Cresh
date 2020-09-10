@@ -86,7 +86,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
   * User can see number or workout type performed as well as that of opponent
   * User earns more points when challenging others
  
- * Settings
+* Settings
   * User can update his profile name
   * User can input his height
   * User can input his description
