@@ -2,9 +2,8 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
 
 ## Overview
 ### Description
@@ -26,14 +25,15 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 
 **Required Must-have Stories**
 
-* Users can Sign Up
-* Users can Login
-* Users can Logout
-* Users can challenge others to work out together
-* Users can automatically keep count of certain workout counts
-* USers can set certain amount of time for working out
-* Users can upload progress to general page
-* Users can view statistics of how much times they squat in a day and track progress
+* User can Login
+* User can Logout
+* User can challenge others to work out together
+* User can automatically keep count of certain workout 
+* User can set certain amount of time for working out
+* User can view statistics of how much times they squat in a day and track progress
+* User can create and join work out groups
+* User can add others to workout groups
+* User can climb ranks while working out
 
 **Reasons**
 * Some atheletes depend on the athletic programs to stay in college through scholarships
@@ -42,69 +42,90 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 ### 2. Screen Archetypes
 
 * Login Screen
-  
-
-* Registeration Screen
-  
-  
-* Home Screen / Timeline
-  
+  * User can login through gmail account
+  * User can view Cresh's Logo
   
 * Profile Screen
+  * User can view his status rank
+  * User can measure growth over a period of time
+  * User can challenge nearby athletes to be competitive
+  * User can Logout
   
-* Progress Screen
-  
+* Other Users Profile Screen
+  * User can view other user's status rank
+  * User can view other user's growth over a period of time
+
+* Group Chat Screen
+  * User can view group chats he's into
+  * User can create new group chat
+  * User can leave group chat
+  * User can tap group chat to view chats
  
-* Detail Screen:
+* Chat Screen
+  * User can chat in group chat along with peers
+  * User can tap on other users image to view profiles
   
-* Setting Screen
+* Group Chat Details Screen
+  * User can see people in group chat along with their ranks
+  * User can challenge person in group chat
+  * User can tap people's profile image to view their profiles
+  * User can view group chat's description
+  * User can leave group chat
   
-* Share Screen
+* Workout Screen
+  * User can select work out type
+  * User can work out individually in any work out type chosen
+  * User can set amount of time required to workout
+  * User can see number or workout type performed
+ 
+* Challenge Workout Screen
+  * User can select work out type
+  * User can challenge random user to specific workout type
+  * User can challenge users in groupchat to specific workout type
+  * User can see number or workout type performed as well as that of opponent
+  * User earns more points when challenging others
+ 
+ * Settings
+  * User can update his profile name
+  * User can input his height
+  * User can input his description
+  * User can upload a profile pic
  
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Home Screen / TimeLine
+* GroupChat Screen
+* WorkOut Screen
 * Profile Screen
-* Progress Screen
 
 **Flow Navigation** (Screen to Screen)
 
 * Login Screen
-  * Sign Up Screen
-  * Home / Timeline Screen
-
-* Sign Up Screen
-  * Login Screen
-  * Home / Timeline Screen
+  * GroupChat Screen
   
-* Home / Timeline Screen
-  * Detail Screen
-  * User Profile Screen
+* GroupChat Screen
+  * Chat Screen
+
+* Chat Screen
+  * GroupChat Details screen
+  * Other Users Profile Screen
  
 * Profile Screen
-  * Setting Screen
   * Detail Screen
+  * Challenge Workout Screen
   
-* Progress Screen
+* GroupChat Details screen
+  * Other Users Profile Screen
+  
+* WorkOut Screen
 
-## Wireframes
+* Settings Screen
 
-<img src="" width=600>
+* Other User's Profile Screen
 
-### [BONUS] Digital Wireframes & Mockups
+* Challenge Workout Screen
+
+### [BONUS] Digital Wireframes 
 <img src = "" width=600>
-
-
-### [BONUS] Interactive Prototype
-
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
