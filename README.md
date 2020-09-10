@@ -26,6 +26,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 ### 1. User Stories (Required)
 **Required Must-have Stories**
 
+* User can sign Up
 * User can Login
 * User can Logout
 * User can challenge others to work out together
@@ -44,8 +45,12 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 ### 2. Screen Archetypes
 
 * Login Screen
-  * User can login through gmail account
+  * User can login 
+  * User can sign up
   * User can view Cresh's Logo
+
+* SignUp Screen
+  * User can register for a new account
   
 * Profile Screen
   * User can view his status rank
@@ -106,6 +111,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 
 * Login Screen
   * GroupChat Screen
+  * SignUp Screen
   
 * GroupChat Screen
   * Chat Screen
@@ -128,6 +134,8 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
 * Other User's Profile Screen
 
 * Challenge Workout Screen
+
+* SignUp Screen
 
 ### [BONUS] Digital Wireframes 
 <img src = "" width=600>
