@@ -79,6 +79,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
   * User can view group chat's description
   * User can leave group chat
   * User can update groupchat's name, description, image
+  * Creator of group chat can discard groupchat
   
 * Workout Screen
   * User can select work out type
