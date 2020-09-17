@@ -78,6 +78,7 @@ Can't soprt with your colleagues due to virtual classes? Lucky you, Cresh's here
   * User can tap people's profile image to view their profiles
   * User can view group chat's description
   * User can leave group chat
+  * User can update groupchat's name, description, image
   
 * Workout Screen
   * User can select work out type
