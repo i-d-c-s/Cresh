@@ -140,5 +140,6 @@ Can't sort with your colleagues due to virtual classes? Lucky you, Cresh's here 
 
 * SignUp Screen
 
-### [BONUS] Digital Wireframes 
-<img src = "https://www.figma.com/file/cjqgY6I1kviTuzVhTM7CAM/Cresh?node-id=0%3A1" width=600>
+### [BONUS] Digital Wireframes on Figma 
+[a link] (https://www.figma.com/file/cjqgY6I1kviTuzVhTM7CAM/Cresh?node-id=0%3A1)
+
