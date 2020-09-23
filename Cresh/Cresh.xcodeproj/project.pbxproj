@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
+		834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4680251AEE4300A0CA66 /* SceneDelegate.swift */; };
+		834D4683251AEE4300A0CA66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4682251AEE4300A0CA66 /* ViewController.swift */; };
+		834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4684251AEE4300A0CA66 /* Main.storyboard */; };
+		834D4688251AEE4D00A0CA66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834D4687251AEE4D00A0CA66 /* Assets.xcassets */; };
+		834D468B251AEE4D00A0CA66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4689251AEE4D00A0CA66 /* LaunchScreen.storyboard */; };
+		834D4696251AEE4D00A0CA66 /* CreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4695251AEE4D00A0CA66 /* CreshTests.swift */; };
+		834D46A1251AEE4E00A0CA66 /* CreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		834D4692251AEE4D00A0CA66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834D4673251AEE4300A0CA66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834D467A251AEE4300A0CA66;
+			remoteInfo = Cresh;
+		};
+		834D469D251AEE4E00A0CA66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834D4673251AEE4300A0CA66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834D467A251AEE4300A0CA66;
+			remoteInfo = Cresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		834D467B251AEE4300A0CA66 /* Cresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		834D467E251AEE4300A0CA66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		834D4680251AEE4300A0CA66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		834D4682251AEE4300A0CA66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		834D4685251AEE4300A0CA66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		834D4687251AEE4D00A0CA66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		834D468A251AEE4D00A0CA66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		834D468C251AEE4D00A0CA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834D4691251AEE4D00A0CA66 /* CreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		834D4695251AEE4D00A0CA66 /* CreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreshTests.swift; sourceTree = "<group>"; };
+		834D4697251AEE4D00A0CA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834D469C251AEE4E00A0CA66 /* CreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreshUITests.swift; sourceTree = "<group>"; };
+		834D46A2251AEE4E00A0CA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		834D4678251AEE4300A0CA66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D468E251AEE4D00A0CA66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D4699251AEE4E00A0CA66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		834D4672251AEE4300A0CA66 = {
+			isa = PBXGroup;
+			children = (
+				834D467D251AEE4300A0CA66 /* Cresh */,
+				834D4694251AEE4D00A0CA66 /* CreshTests */,
+				834D469F251AEE4E00A0CA66 /* CreshUITests */,
+				834D467C251AEE4300A0CA66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		834D467C251AEE4300A0CA66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				834D467B251AEE4300A0CA66 /* Cresh.app */,
+				834D4691251AEE4D00A0CA66 /* CreshTests.xctest */,
+				834D469C251AEE4E00A0CA66 /* CreshUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		834D467D251AEE4300A0CA66 /* Cresh */ = {
+			isa = PBXGroup;
+			children = (
+				834D467E251AEE4300A0CA66 /* AppDelegate.swift */,
+				834D4680251AEE4300A0CA66 /* SceneDelegate.swift */,
+				834D4682251AEE4300A0CA66 /* ViewController.swift */,
+				834D4684251AEE4300A0CA66 /* Main.storyboard */,
+				834D4687251AEE4D00A0CA66 /* Assets.xcassets */,
+				834D4689251AEE4D00A0CA66 /* LaunchScreen.storyboard */,
+				834D468C251AEE4D00A0CA66 /* Info.plist */,
+			);
+			path = Cresh;
+			sourceTree = "<group>";
+		};
+		834D4694251AEE4D00A0CA66 /* CreshTests */ = {
+			isa = PBXGroup;
+			children = (
+				834D4695251AEE4D00A0CA66 /* CreshTests.swift */,
+				834D4697251AEE4D00A0CA66 /* Info.plist */,
+			);
+			path = CreshTests;
+			sourceTree = "<group>";
+		};
+		834D469F251AEE4E00A0CA66 /* CreshUITests */ = {
+			isa = PBXGroup;
+			children = (
+				834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */,
+				834D46A2251AEE4E00A0CA66 /* Info.plist */,
+			);
+			path = CreshUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		834D467A251AEE4300A0CA66 /* Cresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834D46A5251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "Cresh" */;
+			buildPhases = (
+				834D4677251AEE4300A0CA66 /* Sources */,
+				834D4678251AEE4300A0CA66 /* Frameworks */,
+				834D4679251AEE4300A0CA66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cresh;
+			productName = Cresh;
+			productReference = 834D467B251AEE4300A0CA66 /* Cresh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		834D4690251AEE4D00A0CA66 /* CreshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834D46A8251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "CreshTests" */;
+			buildPhases = (
+				834D468D251AEE4D00A0CA66 /* Sources */,
+				834D468E251AEE4D00A0CA66 /* Frameworks */,
+				834D468F251AEE4D00A0CA66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				834D4693251AEE4D00A0CA66 /* PBXTargetDependency */,
+			);
+			name = CreshTests;
+			productName = CreshTests;
+			productReference = 834D4691251AEE4D00A0CA66 /* CreshTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		834D469B251AEE4E00A0CA66 /* CreshUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834D46AB251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "CreshUITests" */;
+			buildPhases = (
+				834D4698251AEE4E00A0CA66 /* Sources */,
+				834D4699251AEE4E00A0CA66 /* Frameworks */,
+				834D469A251AEE4E00A0CA66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				834D469E251AEE4E00A0CA66 /* PBXTargetDependency */,
+			);
+			name = CreshUITests;
+			productName = CreshUITests;
+			productReference = 834D469C251AEE4E00A0CA66 /* CreshUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		834D4673251AEE4300A0CA66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Subomi Popoola";
+				TargetAttributes = {
+					834D467A251AEE4300A0CA66 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					834D4690251AEE4D00A0CA66 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 834D467A251AEE4300A0CA66;
+					};
+					834D469B251AEE4E00A0CA66 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 834D467A251AEE4300A0CA66;
+					};
+				};
+			};
+			buildConfigurationList = 834D4676251AEE4300A0CA66 /* Build configuration list for PBXProject "Cresh" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 834D4672251AEE4300A0CA66;
+			productRefGroup = 834D467C251AEE4300A0CA66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				834D467A251AEE4300A0CA66 /* Cresh */,
+				834D4690251AEE4D00A0CA66 /* CreshTests */,
+				834D469B251AEE4E00A0CA66 /* CreshUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		834D4679251AEE4300A0CA66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834D468B251AEE4D00A0CA66 /* LaunchScreen.storyboard in Resources */,
+				834D4688251AEE4D00A0CA66 /* Assets.xcassets in Resources */,
+				834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D468F251AEE4D00A0CA66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D469A251AEE4E00A0CA66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		834D4677251AEE4300A0CA66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834D4683251AEE4300A0CA66 /* ViewController.swift in Sources */,
+				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
+				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D468D251AEE4D00A0CA66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834D4696251AEE4D00A0CA66 /* CreshTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834D4698251AEE4E00A0CA66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834D46A1251AEE4E00A0CA66 /* CreshUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		834D4693251AEE4D00A0CA66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834D467A251AEE4300A0CA66 /* Cresh */;
+			targetProxy = 834D4692251AEE4D00A0CA66 /* PBXContainerItemProxy */;
+		};
+		834D469E251AEE4E00A0CA66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834D467A251AEE4300A0CA66 /* Cresh */;
+			targetProxy = 834D469D251AEE4E00A0CA66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		834D4684251AEE4300A0CA66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834D4685251AEE4300A0CA66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		834D4689251AEE4D00A0CA66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834D468A251AEE4D00A0CA66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		834D46A3251AEE4E00A0CA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		834D46A4251AEE4E00A0CA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		834D46A6251AEE4E00A0CA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = Cresh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.Cresh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		834D46A7251AEE4E00A0CA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = Cresh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.Cresh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		834D46A9251AEE4E00A0CA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = CreshTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.CreshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cresh.app/Cresh";
+			};
+			name = Debug;
+		};
+		834D46AA251AEE4E00A0CA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = CreshTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.CreshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cresh.app/Cresh";
+			};
+			name = Release;
+		};
+		834D46AC251AEE4E00A0CA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = CreshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.CreshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cresh;
+			};
+			name = Debug;
+		};
+		834D46AD251AEE4E00A0CA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7DF23RMRWS;
+				INFOPLIST_FILE = CreshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = idcs.CreshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cresh;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		834D4676251AEE4300A0CA66 /* Build configuration list for PBXProject "Cresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834D46A3251AEE4E00A0CA66 /* Debug */,
+				834D46A4251AEE4E00A0CA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834D46A5251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "Cresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834D46A6251AEE4E00A0CA66 /* Debug */,
+				834D46A7251AEE4E00A0CA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834D46A8251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "CreshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834D46A9251AEE4E00A0CA66 /* Debug */,
+				834D46AA251AEE4E00A0CA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834D46AB251AEE4E00A0CA66 /* Build configuration list for PBXNativeTarget "CreshUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834D46AC251AEE4E00A0CA66 /* Debug */,
+				834D46AD251AEE4E00A0CA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 834D4673251AEE4300A0CA66 /* Project object */;
+}
