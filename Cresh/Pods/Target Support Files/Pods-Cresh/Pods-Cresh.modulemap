@@ -1,0 +1,6 @@
+framework module Pods_Cresh {
+  umbrella header "Pods-Cresh-umbrella.h"
+
+  export *
+  module * { export * }
+}
