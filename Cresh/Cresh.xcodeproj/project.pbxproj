@@ -11,7 +11,6 @@
 		7DCF84614AAA9ADC54E72BCE /* Pods_CreshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A57962EE4FC4E2A65472AF6 /* Pods_CreshTests.framework */; };
 		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
 		834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4680251AEE4300A0CA66 /* SceneDelegate.swift */; };
-		834D4683251AEE4300A0CA66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4682251AEE4300A0CA66 /* ViewController.swift */; };
 		834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4684251AEE4300A0CA66 /* Main.storyboard */; };
 		834D4688251AEE4D00A0CA66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834D4687251AEE4D00A0CA66 /* Assets.xcassets */; };
 		834D468B251AEE4D00A0CA66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4689251AEE4D00A0CA66 /* LaunchScreen.storyboard */; };
@@ -50,7 +49,6 @@
 		834D467B251AEE4300A0CA66 /* Cresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D467E251AEE4300A0CA66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834D4680251AEE4300A0CA66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		834D4682251AEE4300A0CA66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		834D4685251AEE4300A0CA66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		834D4687251AEE4D00A0CA66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		834D468A251AEE4D00A0CA66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				83B89C68251C86BA00A88920 /* Models */,
 				834D467E251AEE4300A0CA66 /* AppDelegate.swift */,
 				834D4680251AEE4300A0CA66 /* SceneDelegate.swift */,
-				834D4682251AEE4300A0CA66 /* ViewController.swift */,
 				834D4684251AEE4300A0CA66 /* Main.storyboard */,
 				834D4687251AEE4D00A0CA66 /* Assets.xcassets */,
 				834D4689251AEE4D00A0CA66 /* LaunchScreen.storyboard */,
@@ -435,7 +432,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */,
-				834D4683251AEE4300A0CA66 /* ViewController.swift in Sources */,
 				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
 			);
