@@ -9,6 +9,7 @@ target 'Cresh' do
     pod 'Parse'
     pod 'Parse/UI'
     pod 'AlamofireImage'
+    pod 'AFNetworking'
 
   target 'CreshTests' do
     inherit! :search_paths
