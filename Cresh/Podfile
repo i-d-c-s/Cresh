@@ -7,6 +7,7 @@ target 'Cresh' do
 
   # Pods for Cresh
     pod 'Parse'
+    pod 'Parse/UI'
 
   target 'CreshTests' do
     inherit! :search_paths
