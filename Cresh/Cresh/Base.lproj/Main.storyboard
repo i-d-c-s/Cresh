@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="passwordField" destination="eAS-rW-fMK" id="vVH-3p-pQG"/>
                         <outlet property="usernameField" destination="E9Q-ak-rIz" id="ccG-Jo-VvY"/>
+                        <segue destination="goR-Cw-EHC" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="3MD-oC-aYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
