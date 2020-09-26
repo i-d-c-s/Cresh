@@ -25,12 +25,30 @@ class LoginViewController: UIViewController {
 
     }
     
+    func emptyFieldAlert(){
+        let alert = UIAlertController(title: "Details Required", message: "Fill in empty fields", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func wrongUserAlert(){
+        let alert = UIAlertController(title: "Invalid Details", message: "We Could not find this User", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func loginUser(_ sender: Any) {
-        PFUser.logInWithUsername(inBackground: self.username, password: self.password) { (user, error) in
-            if (user != nil){
-                self.performSegue(withIdentifier: "loginSegue", sender: nil);
-            } else{
-                print("Error: \(String(describing: error?.localizedDescription))")
+        if (self.username.isEmpty || self.password.isEmpty){
+            self.emptyFieldAlert()
+        }
+        else{
+            PFUser.logInWithUsername(inBackground: self.username, password: self.password) { (user, error) in
+                if (user != nil){
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil);
+                } else{
+                    self.wrongUserAlert()
+                    print("Error: \(String(describing: error?.localizedDescription))")
+                }
             }
         }
     }
