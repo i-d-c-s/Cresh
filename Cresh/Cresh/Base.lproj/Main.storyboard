@@ -292,11 +292,11 @@
             </objects>
             <point key="canvasLocation" x="-584" y="2480"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aSt-if-IaE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SFm-oB-5uf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sid-pO-bMF"/>
+                    <tabBarItem key="tabBarItem" title="" image="groupChatIcon30px" id="sid-pO-bMF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K84-wr-CON">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -327,11 +327,11 @@
             </objects>
             <point key="canvasLocation" x="696" y="2480"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="bQQ-Ro-rdy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DsQ-Na-FMf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="alK-YV-ir2"/>
+                    <tabBarItem key="tabBarItem" title="" image="muscleIcon30px" id="alK-YV-ir2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ro-60-Evu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -362,11 +362,11 @@
             </objects>
             <point key="canvasLocation" x="1909" y="2480"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="80K-Pv-cMQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aay-QO-9Kr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iRm-3s-rm2"/>
+                    <tabBarItem key="tabBarItem" title="" image="userIcon30px" id="iRm-3s-rm2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Be-Q7-Bve">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -385,7 +385,10 @@
     <resources>
         <image name="Rectangle 1loginButton" width="196" height="29"/>
         <image name="createGroup48px" width="48" height="48"/>
+        <image name="groupChatIcon30px" width="30" height="30"/>
         <image name="loginScreen" width="600" height="400"/>
+        <image name="muscleIcon30px" width="30" height="30"/>
+        <image name="userIcon30px" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
