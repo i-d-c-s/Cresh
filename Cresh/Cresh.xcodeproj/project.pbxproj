@@ -17,6 +17,7 @@
 		834D4696251AEE4D00A0CA66 /* CreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4695251AEE4D00A0CA66 /* CreshTests.swift */; };
 		834D46A1251AEE4E00A0CA66 /* CreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */; };
 		83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C6B251C873900A88920 /* LoginViewController.swift */; };
+		83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreshUITests.swift; sourceTree = "<group>"; };
 		834D46A2251AEE4E00A0CA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B89C6B251C873900A88920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				83B89C6B251C873900A88920 /* LoginViewController.swift */,
+				83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */,
 				83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */,
 				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,

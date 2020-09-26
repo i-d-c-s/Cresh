@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="696" y="877"/>
         </scene>
-        <!--View Controller-->
+        <!--Group Chat View Controller-->
         <scene sceneID="8CR-n4-vOd">
             <objects>
-                <viewController id="6Xo-Qi-UeM" sceneMemberID="viewController">
+                <viewController id="6Xo-Qi-UeM" customClass="GroupChatViewController" customModule="Cresh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PAw-Qa-jmT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
