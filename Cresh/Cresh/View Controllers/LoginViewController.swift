@@ -25,13 +25,13 @@ class LoginViewController: UIViewController {
 
     }
     
-    func emptyFieldAlert(){
+    func emptyFieldAlert() {
         let alert = UIAlertController(title: "Details Required", message: "Fill in empty fields", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func wrongUserAlert(){
+    func wrongUserAlert() {
         let alert = UIAlertController(title: "Invalid Details", message: "We Could not find this User", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
