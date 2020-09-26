@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var username = String()
+    var password = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.username = usernameField.text!
+        self.password = passwordField.text!
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func loginUser(_ sender: Any) {
+        PFUser.logInWithUsername(inBackground: self.username, password: self.password) { (user, error) in
+            if (user != nil){
+                self.performSegue(withIdentifier: "loginSegue", sender: nil);
+            } else{
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
     }
     
     @IBAction func registerUser(_ sender: Any) {
