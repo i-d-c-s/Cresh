@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29BDE1732521389900CC40F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BDE1722521389900CC40F1 /* SignUpViewController.swift */; };
 		39DFD21FC63E12B144E17893 /* Pods_Cresh_CreshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */; };
 		7DCF84614AAA9ADC54E72BCE /* Pods_CreshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A57962EE4FC4E2A65472AF6 /* Pods_CreshTests.framework */; };
 		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5E5A2FE870614ECEFBD0D0 /* Pods-CreshTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreshTests.release.xcconfig"; path = "Target Support Files/Pods-CreshTests/Pods-CreshTests.release.xcconfig"; sourceTree = "<group>"; };
+		29BDE1722521389900CC40F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		36D7BAB46D1EC4E6A59E9E93 /* Pods-CreshTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreshTests.debug.xcconfig"; path = "Target Support Files/Pods-CreshTests/Pods-CreshTests.debug.xcconfig"; sourceTree = "<group>"; };
 		43830C5662E480F0D65E70C9 /* Pods-Cresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cresh.release.xcconfig"; path = "Target Support Files/Pods-Cresh/Pods-Cresh.release.xcconfig"; sourceTree = "<group>"; };
 		54269F039C755116CE885583 /* Pods-Cresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cresh.debug.xcconfig"; path = "Target Support Files/Pods-Cresh/Pods-Cresh.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,9 +143,7 @@
 		834D467D251AEE4300A0CA66 /* Cresh */ = {
 			isa = PBXGroup;
 			children = (
-				83B89C6A251C86CD00A88920 /* Views */,
 				83B89C69251C86C300A88920 /* View Controllers */,
-				83B89C68251C86BA00A88920 /* Models */,
 				834D467E251AEE4300A0CA66 /* AppDelegate.swift */,
 				834D4680251AEE4300A0CA66 /* SceneDelegate.swift */,
 				834D4684251AEE4300A0CA66 /* Main.storyboard */,
@@ -172,27 +172,14 @@
 			path = CreshUITests;
 			sourceTree = "<group>";
 		};
-		83B89C68251C86BA00A88920 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		83B89C69251C86C300A88920 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				83B89C6B251C873900A88920 /* LoginViewController.swift */,
 				83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */,
+				29BDE1722521389900CC40F1 /* SignUpViewController.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		83B89C6A251C86CD00A88920 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +425,7 @@
 				83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */,
 				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
+				29BDE1732521389900CC40F1 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

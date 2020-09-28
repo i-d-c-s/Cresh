@@ -13,16 +13,19 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
-    var username = String()
-    var password = String()
+    @IBOutlet weak var backgroundView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.username = usernameField.text!
-        self.password = passwordField.text!
-
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        backgroundView.isUserInteractionEnabled = true
+        backgroundView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.view.endEditing(true)
     }
     
     func emptyFieldAlert() {
@@ -38,11 +41,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginUser(_ sender: Any) {
-        if (self.username.isEmpty || self.password.isEmpty){
+        if (usernameField.text == "" || passwordField.text == ""){
             self.emptyFieldAlert()
         }
         else{
-            PFUser.logInWithUsername(inBackground: self.username, password: self.password) { (user, error) in
+            PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) { (user, error) in
                 if (user != nil){
                     self.performSegue(withIdentifier: "loginSegue", sender: nil);
                 } else{
@@ -54,6 +57,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerUser(_ sender: Any) {
+        self.performSegue(withIdentifier: "signUpSegue", sender: nil);
     }
     
     @IBAction func toggleKeyboard(_ sender: Any) {
