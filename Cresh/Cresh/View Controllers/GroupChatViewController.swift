@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class GroupChatViewController: UIViewController {
     
@@ -24,6 +25,16 @@ class GroupChatViewController: UIViewController {
     @IBAction func addNewGroup(_ sender: Any) {
     }
     
-    
+    func populateTable() -> PFObject? {
+        let query = PFQuery(className:"") //FIX-ME - Find class name
+        query.findObjectsInBackground { ( objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                print("Successfully retrieved \(objects.count) objects")
+                return objects
+            }
+        }
+    }
    
 }
