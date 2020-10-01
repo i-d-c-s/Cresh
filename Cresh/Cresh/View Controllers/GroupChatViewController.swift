@@ -23,10 +23,6 @@ class GroupChatViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func addNewGroup(_ sender: Any) {
-    }
-    
     func populateTable() {
         let query = PFQuery(className:"GroupChats")
         query.order(byDescending: "createdAt")
@@ -38,6 +34,9 @@ class GroupChatViewController: UIViewController {
                 self.groupChats = objects
             }
         }
+    }
+
+    @IBAction func addNewGroup(_ sender: Any) {
     }
    
 }
