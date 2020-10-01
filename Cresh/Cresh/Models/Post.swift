@@ -13,6 +13,7 @@ class Post: PFObject, PFSubclassing {
     
     @NSManaged var media : PFFileObject
     @NSManaged var author: PFUser
+    @NSManaged var groupName: String
     @NSManaged var caption: String
     @NSManaged var members: [String]
     
@@ -20,13 +21,14 @@ class Post: PFObject, PFSubclassing {
         return "Post"
     }
     
-    class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
+    class func createGroup(image: UIImage?, withName groupName: String?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         // use subclass approach
         let post = Post()
         
         // Add relevant fields to the object
         post.media = getPFFileFromImage(image: image)! // PFFile column type
         post.author = PFUser.current()! // Pointer column type that points to PFUser
+        post.groupName = groupName!
         post.caption = (caption == "" ? "- No Description" : caption)!
         post.members = [String]()
         post.members.append((PFUser.current()?.username)!)
