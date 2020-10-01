@@ -14,6 +14,7 @@ class Post: PFObject, PFSubclassing {
     @NSManaged var media : PFFileObject
     @NSManaged var author: PFUser
     @NSManaged var caption: String
+    @NSManaged var members: [String]
     
     class func parseClassName() -> String {
         return "Post"
@@ -27,6 +28,8 @@ class Post: PFObject, PFSubclassing {
         post.media = getPFFileFromImage(image: image)! // PFFile column type
         post.author = PFUser.current()! // Pointer column type that points to PFUser
         post.caption = (caption == "" ? "- No Description" : caption)!
+        post.members = [String]()
+        post.members.append((PFUser.current()?.username)!)
         
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackground(block: completion)
