@@ -18,6 +18,8 @@
 		834D4696251AEE4D00A0CA66 /* CreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4695251AEE4D00A0CA66 /* CreshTests.swift */; };
 		834D46A1251AEE4E00A0CA66 /* CreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */; };
 		8373A7E32525A2200038ABB8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A7E22525A2200038ABB8 /* Post.swift */; };
+		8373A7EE2525CB230038ABB8 /* WorkOutsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */; };
+		8373A7F32525CB430038ABB8 /* WorkoutsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A7F22525CB430038ABB8 /* WorkoutsCell.swift */; };
 		83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C6B251C873900A88920 /* LoginViewController.swift */; };
 		83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
@@ -64,6 +66,8 @@
 		834D46A0251AEE4E00A0CA66 /* CreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreshUITests.swift; sourceTree = "<group>"; };
 		834D46A2251AEE4E00A0CA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8373A7E22525A2200038ABB8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutsGridViewController.swift; sourceTree = "<group>"; };
+		8373A7F22525CB430038ABB8 /* WorkoutsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCell.swift; sourceTree = "<group>"; };
 		83B89C6B251C873900A88920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,7 @@
 		8373A7E025259D740038ABB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8373A7F22525CB430038ABB8 /* WorkoutsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				83B89C6B251C873900A88920 /* LoginViewController.swift */,
 				29BDE1722521389900CC40F1 /* SignUpViewController.swift */,
 				83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */,
+				8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -443,6 +449,8 @@
 				83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */,
 				83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */,
 				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
+				8373A7F32525CB430038ABB8 /* WorkoutsCell.swift in Sources */,
+				8373A7EE2525CB230038ABB8 /* WorkOutsGridViewController.swift in Sources */,
 				8373A7E32525A2200038ABB8 /* Post.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
 				29BDE1732521389900CC40F1 /* SignUpViewController.swift in Sources */,
