@@ -37,7 +37,11 @@ class GroupChatViewController: UIViewController {
     }
     
     func postChatDetails(groupName: String, groupCaption: String){
-       
+        let imageName = String(format: "defaultChatBackground%d", Int.random(in: 1..<4))
+        let image = UIImage(named: imageName)
+        if (groupName != ""){
+            Post.createGroup(image: image, withName: groupName, withCaption: groupCaption, withCompletion: nil)
+        }
     }
     
     func createChatDetails() {
