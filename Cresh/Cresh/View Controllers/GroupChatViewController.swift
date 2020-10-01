@@ -24,7 +24,7 @@ class GroupChatViewController: UIViewController {
     }
     
     func populateTable() {
-        let query = PFQuery(className:"GroupChats")
+        let query = PFQuery(className:"Post")
         query.order(byDescending: "createdAt")
         query.findObjectsInBackground { ( objects: [PFObject]?, error: Error?) in
             if let error = error {
