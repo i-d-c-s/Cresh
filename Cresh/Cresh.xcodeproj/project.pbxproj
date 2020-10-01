@@ -143,6 +143,8 @@
 		834D467D251AEE4300A0CA66 /* Cresh */ = {
 			isa = PBXGroup;
 			children = (
+				8373A7E125259D810038ABB8 /* Models */,
+				8373A7E025259D740038ABB8 /* Views */,
 				83B89C69251C86C300A88920 /* View Controllers */,
 				834D467E251AEE4300A0CA66 /* AppDelegate.swift */,
 				834D4680251AEE4300A0CA66 /* SceneDelegate.swift */,
@@ -170,6 +172,20 @@
 				834D46A2251AEE4E00A0CA66 /* Info.plist */,
 			);
 			path = CreshUITests;
+			sourceTree = "<group>";
+		};
+		8373A7E025259D740038ABB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8373A7E125259D810038ABB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		83B89C69251C86C300A88920 /* View Controllers */ = {
