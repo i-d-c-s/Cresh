@@ -531,6 +531,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="W.O.R.K.O.U.T.S" id="QLa-f5-kfE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="whb-FM-Vly" id="y8n-uF-52e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bx7-Ef-uxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
