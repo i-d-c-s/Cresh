@@ -10,4 +10,6 @@ import UIKit
 
 class WorkoutsCell: UICollectionViewCell {
     
+    @IBOutlet weak var workoutPoster: UIImageView!
+    
 }
