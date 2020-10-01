@@ -15,6 +15,8 @@ class GroupChatViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedController: UISegmentedControl!
     
+    var groupChats = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,14 +27,15 @@ class GroupChatViewController: UIViewController {
     @IBAction func addNewGroup(_ sender: Any) {
     }
     
-    func populateTable() -> PFObject? {
-        let query = PFQuery(className:"") //FIX-ME - Find class name
+    func populateTable() {
+        let query = PFQuery(className:"GroupChats")
+        query.order(byDescending: "createdAt")
         query.findObjectsInBackground { ( objects: [PFObject]?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
             } else if let objects = objects {
                 print("Successfully retrieved \(objects.count) objects")
-                return objects
+                self.groupChats = objects
             }
         }
     }
