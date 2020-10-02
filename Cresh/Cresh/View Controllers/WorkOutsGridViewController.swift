@@ -19,9 +19,20 @@ class WorkOutsGridViewController: UIViewController, UICollectionViewDelegate, UI
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-
+        
+        editCollectionViewLayout()
+        
         self.workOuts = ["pushUps", "inclinePushUps", "declinePushUps", "squats", "pullUps", "sprints"]
         self.collectionView.reloadData()
+    }
+    
+    func editCollectionViewLayout(){
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = 3
+        layout.minimumInteritemSpacing = 3
+                
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2.5) / 2
+        layout.itemSize = CGSize(width: width, height: width * 1.125)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
