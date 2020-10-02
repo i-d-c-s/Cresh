@@ -8,14 +8,30 @@
 
 import UIKit
 
-class WorkOutsGridViewController: UIViewController {
+class WorkOutsGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var workOuts: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        self.workOuts = ["pushUps", "inclinePushUps", "declinePushUps", "squats", "pullUps", "sprints"]
+        self.collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.workOuts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "WorkoutsCell", for: indexPath) as! WorkoutsCell
+        cell.setImage(imageName: self.workOuts[indexPath.row])
+        return cell
     }
     
 

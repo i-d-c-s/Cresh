@@ -12,4 +12,9 @@ class WorkoutsCell: UICollectionViewCell {
     
     @IBOutlet weak var workoutPoster: UIImageView!
     
+    func setImage(imageName: String) {
+        let image = UIImage(named: imageName)
+        self.workoutPoster.image = image
+    }
+    
 }
