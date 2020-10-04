@@ -36,7 +36,13 @@ class SignUpViewController: UIViewController {
     }
     
     func errorAlert() {
-        let alert = UIAlertController(title: "An Error Occured", message: "There was an error signing up, please  try again", preferredStyle: .alert)
+        let alert = UIAlertController(title: "An Error Occured", message: "There was an error signing up, please try again", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func dupUsernameAlert() {
+        let alert = UIAlertController(title: "Username ", message: "Please choose a new username and try again", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -51,18 +57,35 @@ class SignUpViewController: UIViewController {
             user.password = passwordTextField.text
             user.email = emailTextField.text
             //can add step here to check if username is already taken
-            user.signUpInBackground {
-                (succeeded: Bool, error: Error?) -> Void in
+            let query = PFUser.query()!
+            query.whereKey("username", equalTo:user.username!)
+            query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
                 if let error = error {
-                    let errorString = error.localizedDescription
-                    print("Error: \(String(describing: errorString))")
-                    self.errorAlert()
-                } else {
-                    self.performSegue(withIdentifier: "signUpSuccessSegue", sender: nil);
+                    print(error.localizedDescription)
+                } else if let objects = objects {
+                    if(objects.count != 0){
+                        self.dupUsernameAlert()
+                    }else{
+                        user.signUpInBackground {
+                            (succeeded: Bool, error: Error?) -> Void in
+                            if let error = error {
+                                let errorString = error.localizedDescription
+                                print("Error: \(String(describing: errorString))")
+                                self.errorAlert()
+                            } else {
+                                self.performSegue(withIdentifier: "signUpSuccessSegue", sender: nil);
+                            }
+                        }
+                    }
                 }
             }
             
+            
         }
+    }
+    
+    @IBAction func cancelPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "cancelSegue", sender: nil);
     }
     
     

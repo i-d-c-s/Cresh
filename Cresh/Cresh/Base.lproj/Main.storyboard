@@ -126,6 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ojf-HY-4SW"/>
                     <connections>
                         <outlet property="backgroundView" destination="xfC-0F-JIt" id="jGh-PL-Dqy"/>
                         <outlet property="passwordField" destination="eAS-rW-fMK" id="vVH-3p-pQG"/>
@@ -256,6 +257,26 @@
                                 <rect key="frame" x="87" y="690" width="240" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-IY-wPr">
+                                <rect key="frame" x="176" y="764" width="62" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cancel">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="20" name="Didot"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="qQ3-Sv-LDz" eventType="touchUpInside" id="9t1-SN-0ZY"/>
+                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vO-ck-Zkm"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegue" id="J5z-dN-HRy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PhW-8F-cGO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -612,7 +633,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3MD-oC-aYh"/>
+        <segue reference="6PJ-oy-9Vh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle 1loginButton" width="196" height="29"/>
