@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class GroupChatViewController: UIViewController {
+class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,8 +19,28 @@ class GroupChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        populateTable()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.groupChats.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupChatCell") as! GroupChatCell
+        let gc = self.groupChats[indexPath.row]
+        
+        cell.ChatNameLabel.text =  gc["groupName"] as? String
+        
+        return cell
     }
     
     func populateTable() {
@@ -32,6 +52,7 @@ class GroupChatViewController: UIViewController {
             } else if let objects = objects {
                 print("Successfully retrieved \(objects.count) objects")
                 self.groupChats = objects
+                self.tableView.reloadData()
             }
         }
     }

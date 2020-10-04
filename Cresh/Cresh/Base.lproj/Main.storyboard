@@ -360,7 +360,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="6eF-js-EUc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupChatCell" rowHeight="150" id="6eF-js-EUc" customClass="GroupChatCell" customModule="Cresh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6eF-js-EUc" id="BtC-0u-WQz">
@@ -432,6 +432,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ChatNameLabel" destination="MrS-RX-mcd" id="h6U-zO-hV4"/>
+                                            <outlet property="DescriptionLabel" destination="TDc-4g-23Z" id="hPR-P6-Z0K"/>
+                                            <outlet property="MembersLabel" destination="v1R-G0-bJB" id="h8O-po-GA0"/>
+                                            <outlet property="PhotoImageView" destination="Ehn-Fq-4uc" id="1TQ-O6-ZAQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
