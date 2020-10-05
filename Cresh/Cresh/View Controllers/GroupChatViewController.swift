@@ -8,18 +8,21 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentedController: UISegmentedControl!
     
     var groupChats = [PFObject]()
+    var filteredData = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -36,11 +39,44 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupChatCell") as! GroupChatCell
-        let gc = self.groupChats[indexPath.row]
+        let gc = self.filteredData[indexPath.row]
+        
+        let members = gc["members"] as? [String]
         
         cell.ChatNameLabel.text =  gc["groupName"] as? String
+        cell.DescriptionLabel.text = gc["caption"] as? String
+        cell.MembersLabel.text = String(members!.count) + " Members"
+        
+        let imageFile = gc["media"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string:urlString)!
+        
+        cell.PhotoImageView.af_setImage(withURL: url)
         
         return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchBar.text != ""){
+            //            let descriptionPredicate =
+            //                    NSPredicate(format: "description.contains(%@)",searchText)
+            //            let namePredicate =
+            //                    NSPredicate(format: "groupName.contains(%@)",searchText)
+            //            let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [descriptionPredicate, namePredicate])
+            //            self.filteredData = self.groupChats.filter { predicate.evaluate(with: $0) };
+            
+        }
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
     
     func populateTable() {
@@ -52,6 +88,7 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
             } else if let objects = objects {
                 print("Successfully retrieved \(objects.count) objects")
                 self.groupChats = objects
+                self.filteredData = self.groupChats
                 self.tableView.reloadData()
             }
         }
@@ -87,9 +124,9 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         self.present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func addNewGroup(_ sender: Any) {
         createChatDetails()
     }
-   
+    
 }

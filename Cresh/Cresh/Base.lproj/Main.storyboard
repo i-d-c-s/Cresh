@@ -297,7 +297,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JTU-5q-iWB">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="goR-Cw-EHC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StartController" modalPresentationStyle="fullScreen" id="goR-Cw-EHC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="13u-pb-NT0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QRq-jp-nji">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -426,7 +426,7 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-Fq-4uc">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-Fq-4uc">
                                                     <rect key="frame" x="20" y="11" width="120" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
