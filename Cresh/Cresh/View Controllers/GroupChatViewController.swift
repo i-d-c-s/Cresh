@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
+class GroupChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -116,11 +116,29 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
     }
     
+    func groupCreationErrorAlert(){
+        let alert = UIAlertController(title: "Error", message: "Could not create group", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+
+        let when = DispatchTime.now() + 3
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func postChatDetails(groupName: String, groupCaption: String){
         let imageName = String(format: "defaultChatBackground%d", Int.random(in: 1..<4))
         let image = UIImage(named: imageName)
         if (groupName != ""){
-            Post.createGroup(image: image, withName: groupName, withCaption: groupCaption, withCompletion: nil)
+            let groupChat = PFObject(className: groupName)
+            groupChat.saveInBackground { (success, error) in
+                if error != nil{
+                    self.groupCreationErrorAlert()
+                } else{
+                    Post.createGroup(image: image, withName: groupName, withCaption: groupCaption, withCompletion: nil)
+                }
+            }
         }
         populateTable()
     }

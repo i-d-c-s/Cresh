@@ -34,18 +34,7 @@ class Post: PFObject, PFSubclassing {
         post.members.append((PFUser.current()?.username)!)
         
         // Save object (following function will save the object in Parse asynchronously)
-        post.saveInBackground { (success, error) in
-            if let error = error{
-                print(error.localizedDescription)
-            } else{
-                createGroupObject(groupName: groupName)
-            }
-        }
-    }
-    
-    class func createGroupObject(groupName: String?){
-        let groupChat = PFObject(className: groupName!)
-        groupChat.saveInBackground()
+        post.saveInBackground()
     }
     
     class func getPFFileFromImage(image: UIImage?) -> PFFileObject? {

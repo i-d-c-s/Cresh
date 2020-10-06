@@ -313,7 +313,7 @@
             </objects>
             <point key="canvasLocation" x="696" y="921"/>
         </scene>
-        <!--Group Chat View Controller-->
+        <!--Cresh-->
         <scene sceneID="8CR-n4-vOd">
             <objects>
                 <viewController id="6Xo-Qi-UeM" customClass="GroupChatViewController" customModule="Cresh" customModuleProvider="target" sceneMemberID="viewController">
@@ -448,7 +448,7 @@
                         <viewLayoutGuide key="safeArea" id="FPi-W1-wDk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AEV-h5-i7L">
+                    <navigationItem key="navigationItem" title="Cresh" id="AEV-h5-i7L">
                         <barButtonItem key="rightBarButtonItem" image="createGroup48px" id="snf-P9-iVe">
                             <connections>
                                 <action selector="addNewGroup:" destination="6Xo-Qi-UeM" id="FMD-sz-gkw"/>
@@ -600,10 +600,28 @@
                     <navigationItem key="navigationItem" title="Chats" id="gan-Uy-89p">
                         <barButtonItem key="rightBarButtonItem" image="infoIcon30px" id="FxY-M1-amj"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ZT0-pd-9XF" kind="presentation" identifier="chatInfoSegue" modalPresentationStyle="fullScreen" id="7dv-EU-ekW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMw-M8-InN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284" y="3660"/>
+            <point key="canvasLocation" x="-1284" y="3571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2uv-Sz-vmA">
+            <objects>
+                <viewController id="ZT0-pd-9XF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SZL-XL-QdG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="riN-7d-djG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ry1-z2-zDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1284" y="4398"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xfx-qZ-Zbv">
