@@ -50,6 +50,7 @@
 		8373A9542526DC3D0038ABB8 /* WorkoutTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */; };
 		83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C6B251C873900A88920 /* LoginViewController.swift */; };
 		83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */; };
+		83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCD9E252C786B0037999B /* ProfileViewController.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeViewController.swift; sourceTree = "<group>"; };
 		83B89C6B251C873900A88920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
+		83EDCD9E252C786B0037999B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -375,6 +377,7 @@
 				83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */,
 				8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */,
 				8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */,
+				83EDCD9E252C786B0037999B /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				8373A7EE2525CB230038ABB8 /* WorkOutsGridViewController.swift in Sources */,
 				8373A7E32525A2200038ABB8 /* Post.swift in Sources */,
 				8373A9472526D4490038ABB8 /* PoseBuilder+Multiple.swift in Sources */,
+				83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */,
 				8373A9402526D4490038ABB8 /* PopOverModalViewController.swift in Sources */,
 				8373A9442526D4490038ABB8 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
