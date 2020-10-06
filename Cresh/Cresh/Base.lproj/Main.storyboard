@@ -598,7 +598,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="gan-Uy-89p">
-                        <barButtonItem key="rightBarButtonItem" image="infoIcon30px" id="FxY-M1-amj"/>
+                        <barButtonItem key="rightBarButtonItem" image="infoIcon30px" id="FxY-M1-amj">
+                            <connections>
+                                <action selector="didTapGroupDetails:" destination="X5D-e2-z4l" id="hNp-BE-ghQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="ZT0-pd-9XF" kind="presentation" identifier="chatInfoSegue" modalPresentationStyle="fullScreen" id="7dv-EU-ekW"/>

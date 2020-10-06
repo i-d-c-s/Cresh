@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import Parse
 
 class ChatViewController: UIViewController {
-
+    var groupChat: PFObject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapGroupDetails(_ sender: Any) {
+        self.performSegue(withIdentifier: "chatInfoSegue", sender: nil)
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    }
 
 }

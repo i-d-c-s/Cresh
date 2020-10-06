@@ -174,4 +174,14 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         createChatDetails()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let groupChat = self.filteredData[indexPath.row]
+                
+        let chatViewController = segue.destination as! ChatViewController
+        chatViewController.groupChat = groupChat
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
