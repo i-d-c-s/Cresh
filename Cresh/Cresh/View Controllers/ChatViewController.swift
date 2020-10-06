@@ -23,7 +23,9 @@ class ChatViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+        let navigationController = segue.destination as! UINavigationController
+        let groupDetailViewConroller = navigationController.topViewController as! GroupDetailViewController
+        groupDetailViewConroller.groupDetail = groupChat
     }
 
 }

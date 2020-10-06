@@ -178,7 +178,7 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
         let groupChat = self.filteredData[indexPath.row]
-                
+        
         let chatViewController = segue.destination as! ChatViewController
         chatViewController.groupChat = groupChat
         
