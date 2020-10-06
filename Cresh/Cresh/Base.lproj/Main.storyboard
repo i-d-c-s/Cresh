@@ -274,7 +274,6 @@
                                 <connections>
                                     <action selector="cancelPressed:" destination="qQ3-Sv-LDz" eventType="touchUpInside" id="9t1-SN-0ZY"/>
                                     <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vO-ck-Zkm"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegue" id="J5z-dN-HRy"/>
                                 </connections>
                             </button>
                         </subviews>

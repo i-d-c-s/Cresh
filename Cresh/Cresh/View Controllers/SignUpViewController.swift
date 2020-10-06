@@ -85,7 +85,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
-        //self.performSegue(withIdentifier: "cancelSegue", sender: nil);
+        self.dismiss(animated: true, completion: nil)
     }
     
     
