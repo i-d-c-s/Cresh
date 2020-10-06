@@ -612,10 +612,10 @@
             </objects>
             <point key="canvasLocation" x="-1284" y="3571"/>
         </scene>
-        <!--View Controller-->
+        <!--Group Detail View Controller-->
         <scene sceneID="2uv-Sz-vmA">
             <objects>
-                <viewController id="ZT0-pd-9XF" sceneMemberID="viewController">
+                <viewController id="ZT0-pd-9XF" customClass="GroupDetailViewController" customModule="Cresh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZL-XL-QdG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

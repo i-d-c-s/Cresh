@@ -53,6 +53,7 @@
 		83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCD9E252C786B0037999B /* ProfileViewController.swift */; };
 		83EDCDB1252C81100037999B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDB0252C81100037999B /* ChatViewController.swift */; };
 		83EDCDB6252C82480037999B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDB5252C82480037999B /* ChatCell.swift */; };
+		83EDCDC8252C968F0037999B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		83EDCD9E252C786B0037999B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83EDCDB0252C81100037999B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		83EDCDB5252C82480037999B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -384,6 +386,7 @@
 				8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */,
 				83EDCD9E252C786B0037999B /* ProfileViewController.swift */,
 				83EDCDB0252C81100037999B /* ChatViewController.swift */,
+				83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				8373A94F2526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
 				8373A94D2526D4490038ABB8 /* PoseNet.swift in Sources */,
 				8373A94A2526D4490038ABB8 /* PoseBuilder.swift in Sources */,
+				83EDCDC8252C968F0037999B /* GroupDetailViewController.swift in Sources */,
 				8373A9432526D4490038ABB8 /* CGImage+Extension.swift in Sources */,
 				83EDCDB1252C81100037999B /* ChatViewController.swift in Sources */,
 			);
