@@ -63,13 +63,12 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if(searchBar.text != ""){
-            //            let descriptionPredicate =
-            //                    NSPredicate(format: "description.contains(%@)",searchText)
-            //            let namePredicate =
-            //                    NSPredicate(format: "groupName.contains(%@)",searchText)
-            //            let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [descriptionPredicate, namePredicate])
-            //            self.filteredData = self.groupChats.filter { predicate.evaluate(with: $0) };
-            
+//            let descriptionPredicate =
+//                    NSPredicate(format: "description.contains(%@)",searchText)
+//            let namePredicate =
+//                    NSPredicate(format: "groupName.contains(%@)",searchText)
+//            let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [descriptionPredicate, namePredicate])
+//            self.filteredData = self.groupChats.filter { predicate.evaluate(with: $0) };
         }
         tableView.reloadData()
     }
@@ -105,6 +104,7 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         if (groupName != ""){
             Post.createGroup(image: image, withName: groupName, withCaption: groupCaption, withCompletion: nil)
         }
+        populateTable()
     }
     
     func createChatDetails() {
