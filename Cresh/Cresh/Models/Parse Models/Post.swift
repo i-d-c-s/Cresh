@@ -36,7 +36,10 @@ class Post: PFObject, PFSubclassing {
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackground(block: completion)
     }
-
+    
+    class func createGroupObject(){
+        
+    }
     
     class func getPFFileFromImage(image: UIImage?) -> PFFileObject? {
         // check if image is not nil

@@ -51,6 +51,8 @@
 		83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C6B251C873900A88920 /* LoginViewController.swift */; };
 		83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */; };
 		83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCD9E252C786B0037999B /* ProfileViewController.swift */; };
+		83EDCDB1252C81100037999B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDB0252C81100037999B /* ChatViewController.swift */; };
+		83EDCDB6252C82480037999B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDB5252C82480037999B /* ChatCell.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		83B89C6B251C873900A88920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		83EDCD9E252C786B0037999B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		83EDCDB0252C81100037999B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		83EDCDB5252C82480037999B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -243,6 +247,7 @@
 			children = (
 				8373A7F22525CB430038ABB8 /* WorkoutsCell.swift */,
 				297EE73F252A5F5400C341C7 /* GroupChatCell.swift */,
+				83EDCDB5252C82480037999B /* ChatCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */,
 				8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */,
 				83EDCD9E252C786B0037999B /* ProfileViewController.swift */,
+				83EDCDB0252C81100037999B /* ChatViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				8373A9422526D4490038ABB8 /* CGPoint+Extension.swift in Sources */,
 				8373A93D2526D4490038ABB8 /* ViewController.swift in Sources */,
 				8373A7F32525CB430038ABB8 /* WorkoutsCell.swift in Sources */,
+				83EDCDB6252C82480037999B /* ChatCell.swift in Sources */,
 				8373A7EE2525CB230038ABB8 /* WorkOutsGridViewController.swift in Sources */,
 				8373A7E32525A2200038ABB8 /* Post.swift in Sources */,
 				8373A9472526D4490038ABB8 /* PoseBuilder+Multiple.swift in Sources */,
@@ -658,6 +665,7 @@
 				8373A94D2526D4490038ABB8 /* PoseNet.swift in Sources */,
 				8373A94A2526D4490038ABB8 /* PoseBuilder.swift in Sources */,
 				8373A9432526D4490038ABB8 /* CGImage+Extension.swift in Sources */,
+				83EDCDB1252C81100037999B /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
