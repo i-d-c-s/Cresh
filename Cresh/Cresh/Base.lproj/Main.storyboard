@@ -345,6 +345,9 @@
                                             <segment title="Public"/>
                                             <segment title="myGC's"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="dataChoiceChanged:" destination="6Xo-Qi-UeM" eventType="valueChanged" id="gve-wY-iR7"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

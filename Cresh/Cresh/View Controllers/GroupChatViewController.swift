@@ -83,6 +83,18 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         searchBar.resignFirstResponder()
     }
     
+    func selectGC(){
+        var dummy_data = [PFObject]()
+        for element in self.filteredData{
+            let data = element["members"] as! [String]
+            if data.contains((PFUser.current()?.username)!){
+                dummy_data.append(element)
+            }
+        }
+        self.filteredData = dummy_data
+        self.groupChats = self.filteredData
+    }
+    
     func populateTable() {
         let query = PFQuery(className:"Post")
         query.order(byDescending: "createdAt")
@@ -91,8 +103,14 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
                 print(error.localizedDescription)
             } else if let objects = objects {
                 print("Successfully retrieved \(objects.count) objects")
+                
                 self.groupChats = objects
                 self.filteredData = self.groupChats
+                
+                if (self.segmentedController.selectedSegmentIndex == 1){
+                    self.selectGC()
+                }
+                                
                 self.tableView.reloadData()
             }
         }
@@ -128,6 +146,10 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         alert.addAction(closeAction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func dataChoiceChanged(_ sender: Any) {
+        populateTable()
     }
     
     @IBAction func addNewGroup(_ sender: Any) {
