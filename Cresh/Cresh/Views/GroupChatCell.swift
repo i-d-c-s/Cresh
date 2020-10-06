@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class GroupChatCell: UITableViewCell {
 
-    @IBOutlet weak var PhotoImageView: UIImageView!
+    @IBOutlet weak var PhotoImageView: PFImageView!
     @IBOutlet weak var ChatNameLabel: UILabel!
     @IBOutlet weak var DescriptionLabel: UILabel!
     @IBOutlet weak var MembersLabel: UILabel!

@@ -425,7 +425,7 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-Fq-4uc">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-Fq-4uc" customClass="PFImageView">
                                                     <rect key="frame" x="20" y="11" width="120" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -435,7 +435,7 @@
                                             <outlet property="ChatNameLabel" destination="MrS-RX-mcd" id="h6U-zO-hV4"/>
                                             <outlet property="DescriptionLabel" destination="TDc-4g-23Z" id="hPR-P6-Z0K"/>
                                             <outlet property="MembersLabel" destination="v1R-G0-bJB" id="h8O-po-GA0"/>
-                                            <outlet property="PhotoImageView" destination="Ehn-Fq-4uc" id="1TQ-O6-ZAQ"/>
+                                            <outlet property="PhotoImageView" destination="Ehn-Fq-4uc" id="uZQ-6j-WF6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

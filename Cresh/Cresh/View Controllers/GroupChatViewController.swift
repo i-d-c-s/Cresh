@@ -22,19 +22,25 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBar.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.searchBar.delegate = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         populateTable()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        self.searchBar.delegate = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        populateTable()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.groupChats.count
+        return self.filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,16 +48,15 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
         let gc = self.filteredData[indexPath.row]
         
         let members = gc["members"] as? [String]
+        let imageFile = gc["media"] as! PFFileObject
         
         cell.ChatNameLabel.text =  gc["groupName"] as? String
         cell.DescriptionLabel.text = gc["caption"] as? String
         cell.MembersLabel.text = String(members!.count) + " Members"
-        
-        let imageFile = gc["media"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string:urlString)!
-        
-        cell.PhotoImageView.af_setImage(withURL: url)
+        cell.PhotoImageView.layer.cornerRadius = 18
+        cell.PhotoImageView.layer.masksToBounds = true
+        cell.PhotoImageView.file = imageFile
+        cell.PhotoImageView.loadInBackground()
         
         return cell
     }
