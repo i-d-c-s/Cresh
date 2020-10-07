@@ -55,6 +55,7 @@
 		83EDCDB6252C82480037999B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDB5252C82480037999B /* ChatCell.swift */; };
 		83EDCDC8252C968F0037999B /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */; };
 		83EDCDCD252CA05C0037999B /* GroupDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDCC252CA05C0037999B /* GroupDetailCell.swift */; };
+		83EDCDD2252DC15A0037999B /* MinorGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCDD1252DC15A0037999B /* MinorGroupDetailViewController.swift */; };
 		BC4898CE1509FBD0028886F0 /* Pods_Cresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3BAD02C885A81E2EA9CF9F /* Pods_Cresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		83EDCDB5252C82480037999B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		83EDCDCC252CA05C0037999B /* GroupDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailCell.swift; sourceTree = "<group>"; };
+		83EDCDD1252DC15A0037999B /* MinorGroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinorGroupDetailViewController.swift; sourceTree = "<group>"; };
 		D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cresh_CreshUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -390,6 +392,7 @@
 				83EDCD9E252C786B0037999B /* ProfileViewController.swift */,
 				83EDCDB0252C81100037999B /* ChatViewController.swift */,
 				83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */,
+				83EDCDD1252DC15A0037999B /* MinorGroupDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				8373A9472526D4490038ABB8 /* PoseBuilder+Multiple.swift in Sources */,
 				83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */,
 				8373A9402526D4490038ABB8 /* PopOverModalViewController.swift in Sources */,
+				83EDCDD2252DC15A0037999B /* MinorGroupDetailViewController.swift in Sources */,
 				8373A9442526D4490038ABB8 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
 				834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */,
 				8373A9482526D4490038ABB8 /* PoseBuilder+Single.swift in Sources */,

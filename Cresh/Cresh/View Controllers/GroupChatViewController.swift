@@ -27,6 +27,7 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         
         populateTable()
+        showNavigationBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +38,15 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.dataSource = self
         
         populateTable()
+        showNavigationBar()
+    }
+    
+    func showNavigationBar(){
+        let titleLabel = UILabel()
+        titleLabel.text = "Cresh"
+        titleLabel.font = UIFont.init(name: "Didot", size: 20)
+        titleLabel.sizeToFit()
+        self.navigationItem.titleView = titleLabel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +69,19 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.PhotoImageView.loadInBackground()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gc = self.filteredData[indexPath.row]
+        let members = gc["members"] as! [String]
+        print((PFUser.current()?.username)!)
+        let username = (PFUser.current()?.username)!
+        if (members.contains(username)){
+            self.performSegue(withIdentifier: "memberSegue", sender: gc)
+        } else{
+            self.performSegue(withIdentifier: "visitorSegue", sender: gc)
+        }
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -175,13 +198,14 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let groupChat = self.filteredData[indexPath.row]
         
-        let chatViewController = segue.destination as! ChatViewController
-        chatViewController.groupChat = groupChat
+        if (segue.identifier == "memberSegue"){
+            let chatViewController = segue.destination as! ChatViewController
+            chatViewController.groupChat = (sender as! PFObject)
+        } else{
+            let minorGroupDetailViewController = segue.destination as! MinorGroupDetailViewController
+            minorGroupDetailViewController.groupDetail = (sender as! PFObject)
+        }
         
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
