@@ -74,7 +74,7 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let gc = self.filteredData[indexPath.row]
         let members = gc["members"] as! [String]
-        print((PFUser.current()?.username)!)
+  
         let username = (PFUser.current()?.username)!
         if (members.contains(username)){
             self.performSegue(withIdentifier: "memberSegue", sender: gc)
@@ -119,14 +119,14 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func populateTable() {
+        
         let query = PFQuery(className:"Post")
         query.order(byDescending: "createdAt")
         query.findObjectsInBackground { ( objects: [PFObject]?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
             } else if let objects = objects {
-                print("Successfully retrieved \(objects.count) objects")
-                
+    
                 self.groupChats = objects
                 self.filteredData = self.groupChats
                 

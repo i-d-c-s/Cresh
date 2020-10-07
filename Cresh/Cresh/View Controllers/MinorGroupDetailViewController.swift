@@ -27,6 +27,7 @@ class MinorGroupDetailViewController: UIViewController, UITableViewDelegate, UIT
         self.tableView.delegate = self;
         
         populateView()
+        loadMembers()
     }
     
     func populateView(){

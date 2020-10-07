@@ -450,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUT-Lu-Idz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2849" y="2667"/>
+            <point key="canvasLocation" x="-3186" y="2667"/>
         </scene>
         <!--Cresh-->
         <scene sceneID="8CR-n4-vOd">
@@ -587,6 +587,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cresh" id="AEV-h5-i7L">
+                        <barButtonItem key="leftBarButtonItem" image="alertBell" id="S2i-oa-mEM"/>
                         <barButtonItem key="rightBarButtonItem" image="createGroup48px" id="snf-P9-iVe">
                             <connections>
                                 <action selector="addNewGroup:" destination="6Xo-Qi-UeM" id="FMD-sz-gkw"/>
@@ -603,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JI5-h5-s2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284" y="2667"/>
+            <point key="canvasLocation" x="-1601" y="2667"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aSt-if-IaE">
@@ -710,6 +711,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="2667"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mdg-Kb-vh7">
+            <objects>
+                <viewController id="aOZ-1r-jFS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sK2-7a-9HO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ckv-kz-LZ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSf-I2-KYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2362" y="3571"/>
+        </scene>
         <!--Chats-->
         <scene sceneID="DgF-hD-q8r">
             <objects>
@@ -750,7 +766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMw-M8-InN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1284" y="3571"/>
+            <point key="canvasLocation" x="-600" y="3571"/>
         </scene>
         <!--Group Info-->
         <scene sceneID="2uv-Sz-vmA">
@@ -897,7 +913,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ry1-z2-zDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373.91304347826087" y="4396.875"/>
+            <point key="canvasLocation" x="-3187" y="4525"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xfx-qZ-Zbv">
@@ -991,7 +1007,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-Ei-9J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2178" y="4397"/>
+            <point key="canvasLocation" x="-600" y="4922"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -999,6 +1015,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle 1loginButton" width="196" height="29"/>
+        <image name="alertBell" width="30" height="30"/>
         <image name="challengeIcon30px" width="30" height="30"/>
         <image name="createGroup48px" width="48" height="48"/>
         <image name="groupChatIcon30px" width="30" height="30"/>
