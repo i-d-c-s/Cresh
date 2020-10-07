@@ -40,6 +40,7 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     func loadMembers(){
         let query = PFUser.query()
+        query?.whereKey("username", containedIn: self.groupDetail["members"] as! [String])
         query?.findObjectsInBackground(block: { (objects, error) in
             if error == nil{
                 self.users = objects!
