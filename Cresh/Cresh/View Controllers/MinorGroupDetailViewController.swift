@@ -49,6 +49,17 @@ class MinorGroupDetailViewController: UIViewController, UITableViewDelegate, UIT
         })
     }
     
+    func requestSentAlert(){
+        let alert = UIAlertController(title: "Request Sent", message: "Your request to join as been sent", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+
+        let when = DispatchTime.now() + 3
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.users.count
     }
@@ -60,6 +71,15 @@ class MinorGroupDetailViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     @IBAction func didTapJoinButton(_ sender: Any) {
+        let notification = ["name": PFUser.current()!.username!, "group": groupDetail["groupName"] as! String]
+        var notifications = self.groupDetail["notifications"] as? [[String:String]]
+        if (notifications == nil){
+            notifications = [[String:String]]()
+        }
+        notifications?.append(notification)
+        self.groupDetail["notifications"] = notifications
+        self.groupDetail.saveInBackground()
+        requestSentAlert()
     }
     
 }

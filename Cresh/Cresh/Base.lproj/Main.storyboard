@@ -587,7 +587,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cresh" id="AEV-h5-i7L">
-                        <barButtonItem key="leftBarButtonItem" image="alertBell" id="S2i-oa-mEM"/>
+                        <barButtonItem key="leftBarButtonItem" image="alertBell" id="S2i-oa-mEM">
+                            <connections>
+                                <action selector="didTapNotifications:" destination="6Xo-Qi-UeM" id="uif-FD-Ia8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="createGroup48px" id="snf-P9-iVe">
                             <connections>
                                 <action selector="addNewGroup:" destination="6Xo-Qi-UeM" id="FMD-sz-gkw"/>

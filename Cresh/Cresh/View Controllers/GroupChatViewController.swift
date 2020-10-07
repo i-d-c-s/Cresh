@@ -18,6 +18,7 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var groupChats = [PFObject]()
     var filteredData = [PFObject]()
+    let notificationViewController = NotificationViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +123,7 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let query = PFQuery(className:"Post")
         query.order(byDescending: "createdAt")
+        query.includeKey("author")
         query.findObjectsInBackground { ( objects: [PFObject]?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
@@ -195,6 +197,11 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func addNewGroup(_ sender: Any) {
         createChatDetails()
+    }
+    
+    @IBAction func didTapNotifications(_ sender: Any) {
+        self.notificationViewController.filteredData = self.filteredData
+        self.present(self.notificationViewController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
