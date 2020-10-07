@@ -85,7 +85,10 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         getObject(groupName: groupName)
         
         var members = self.groupDetail.object(forKey: "members") as! [String]
-        members.append(notification["name"]!)
+        if (!members.contains(notification["name"]!)){
+            members.append(notification["name"]!)
+        }
+       
         self.groupDetail["members"] = members
         self.groupDetail.saveInBackground()
     }

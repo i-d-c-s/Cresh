@@ -11,10 +11,39 @@ import Parse
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: PFImageView!
+    @IBOutlet weak var numChallengesLabel: UILabel!
+    @IBOutlet weak var numWinsLabel: UILabel!
+    @IBOutlet weak var numLossesLabel: UILabel!
+    @IBOutlet weak var schoolLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var segmentedController: UISegmentedControl!
+    @IBOutlet weak var numPushupLabel: UILabel!
+    @IBOutlet weak var numInclinePushupLabel: UILabel!
+    @IBOutlet weak var numDeclinePushupLabel: UILabel!
+    @IBOutlet weak var numSquatsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func populateView() {
+        let user = PFUser.current()!
+        let imageData = user.object(forKey: "image")
+        self.profileImage.layer.cornerRadius = 72
+        self.profileImage.layer.masksToBounds = true
+        if (imageData != nil){
+            self.profileImage.file = (imageData as! PFFileObject)
+            self.profileImage.loadInBackground()
+        }
+        self.usernameLabel.text = user.username
+        self.schoolLabel.text = (user.object(forKey: "School") as! String)
+        
+    }
+    
+    @IBAction func dataFormatChanged(_ sender: Any) {
     }
     
     @IBAction func didTapLogout(_ sender: Any) {
