@@ -162,10 +162,10 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.groupCreationErrorAlert()
                 } else{
                     Post.createGroup(image: image, withName: groupName, withCaption: groupCaption, withCompletion: nil)
+                    self.populateTable()
                 }
             }
         }
-        populateTable()
     }
     
     func createChatDetails() {
