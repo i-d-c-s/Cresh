@@ -718,6 +718,21 @@
             </objects>
             <point key="canvasLocation" x="696" y="2667"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hIK-1p-qgj">
+            <objects>
+                <viewController id="StP-1d-sFN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kA8-bt-vI6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Oy-LY-9c5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqE-hU-GjB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2365" y="3571"/>
+        </scene>
         <!--Chats-->
         <scene sceneID="DgF-hD-q8r">
             <objects>
@@ -945,6 +960,21 @@
             </objects>
             <point key="canvasLocation" x="-3187" y="4525"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="35v-P8-1b6">
+            <objects>
+                <viewController id="a0D-1t-VlM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dw1-Ph-zZc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bgS-i0-FI7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhx-P4-nQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="4525"/>
+        </scene>
         <!--Squat View Controller-->
         <scene sceneID="Xfx-qZ-Zbv">
             <objects>
@@ -994,13 +1024,16 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
-                                            <action selector="finishSquatting:" destination="R9O-yc-eGM" eventType="touchUpInside" id="x07-Bl-9R5"/>
+                                            <action selector="finishSquatting:" destination="R9O-yc-eGM" eventType="touchUpInside" id="Hdh-fK-Xje"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRy-5s-XZF">
                                         <rect key="frame" x="356" y="49" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="settings30px"/>
+                                        <connections>
+                                            <action selector="settingsButton:" destination="R9O-yc-eGM" eventType="touchUpInside" id="rtT-YA-yjB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1062,7 +1095,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="beginSquatting:" destination="R9O-yc-eGM" eventType="touchUpInside" id="idT-hg-Nsr"/>
+                                    <action selector="beginSquatting:" destination="R9O-yc-eGM" eventType="touchUpInside" id="b8G-fb-Oj6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YV-iJ-fhE">
@@ -1084,15 +1117,45 @@
                     </view>
                     <navigationItem key="navigationItem" id="K8P-h1-iO7"/>
                     <connections>
-                        <outlet property="counterLabel" destination="tJ7-E6-wN8" id="SCW-db-Tcx"/>
-                        <outlet property="previewImageView" destination="y7w-4E-gg2" id="QCJ-oA-gWI"/>
-                        <outlet property="startButton" destination="iyg-gq-ejc" id="k4T-EF-wOJ"/>
-                        <outlet property="timerLabel" destination="nrU-5k-DT6" id="bPB-yc-m2r"/>
+                        <outlet property="counterLabel" destination="tJ7-E6-wN8" id="v1g-8l-jYa"/>
+                        <outlet property="previewImageView" destination="y7w-4E-gg2" id="Cnq-tc-sTg"/>
+                        <outlet property="startButton" destination="iyg-gq-ejc" id="nmh-gl-MT8"/>
+                        <outlet property="timerLabel" destination="nrU-5k-DT6" id="kkv-Kb-nq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPS-57-Nd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1870" y="3571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="o0c-IP-oib">
+            <objects>
+                <viewController id="lq7-OJ-zFf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oto-Ay-w6N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="i6g-PP-bmA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ng-9a-uEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3351" y="3571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="i82-Zl-t28">
+            <objects>
+                <viewController id="tn8-Cn-JJI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rnR-mi-OhL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dw1-MZ-dDS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FA4-b6-gN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3980" y="4525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bQQ-Ro-rdy">
@@ -1305,6 +1368,21 @@
             </objects>
             <point key="canvasLocation" x="2628.985507246377" y="2666.5178571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jib-E7-exC">
+            <objects>
+                <viewController id="3cN-Uv-bfi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0qT-Pc-43w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l2h-01-Z9R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOZ-hW-ean" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3981" y="2667"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="80K-Pv-cMQ">
             <objects>
@@ -1340,7 +1418,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-Ei-9J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="4922"/>
+            <point key="canvasLocation" x="-600" y="5281"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="trF-eX-1TO">
@@ -1414,7 +1492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRd-aU-aHw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="4922"/>
+            <point key="canvasLocation" x="1870" y="5281"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

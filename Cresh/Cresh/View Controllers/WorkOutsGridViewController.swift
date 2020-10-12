@@ -36,7 +36,7 @@ class WorkOutsGridViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     func notImplementedAlert(){
-        let alert = UIAlertController(title: "Error", message: "Feature Coming Soon", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Coming soon", message: "Feature on the rise", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
 
         let when = DispatchTime.now() + 2
