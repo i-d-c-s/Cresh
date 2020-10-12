@@ -47,7 +47,6 @@
 		8373A94D2526D4490038ABB8 /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A9332526D4490038ABB8 /* PoseNet.swift */; };
 		8373A94E2526D4490038ABB8 /* PoseNetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A9342526D4490038ABB8 /* PoseNetInput.swift */; };
 		8373A94F2526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8373A9352526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel */; };
-		8373A9542526DC3D0038ABB8 /* WorkoutTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */; };
 		83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C6B251C873900A88920 /* LoginViewController.swift */; };
 		83B89C83251FCDCE00A88920 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */; };
 		83EDCD9F252C786B0037999B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDCD9E252C786B0037999B /* ProfileViewController.swift */; };
@@ -130,7 +129,6 @@
 		8373A9332526D4490038ABB8 /* PoseNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		8373A9342526D4490038ABB8 /* PoseNetInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseNetInput.swift; sourceTree = "<group>"; };
 		8373A9352526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PoseNetMobileNet075S16FP16.mlmodel; sourceTree = "<group>"; };
-		8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeViewController.swift; sourceTree = "<group>"; };
 		83B89C6B251C873900A88920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 		83EDCD9E252C786B0037999B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -390,7 +388,6 @@
 				29BDE1722521389900CC40F1 /* SignUpViewController.swift */,
 				83B89C82251FCDCE00A88920 /* GroupChatViewController.swift */,
 				8373A7ED2525CB230038ABB8 /* WorkOutsGridViewController.swift */,
-				8373A9532526DC3D0038ABB8 /* WorkoutTypeViewController.swift */,
 				83EDCD9E252C786B0037999B /* ProfileViewController.swift */,
 				83EDCDB0252C81100037999B /* ChatViewController.swift */,
 				83EDCDC7252C968F0037999B /* GroupDetailViewController.swift */,
@@ -674,7 +671,6 @@
 				29BDE1732521389900CC40F1 /* SignUpViewController.swift in Sources */,
 				83EDCDCD252CA05C0037999B /* GroupDetailCell.swift in Sources */,
 				8373A93E2526D4490038ABB8 /* PoseImageView.swift in Sources */,
-				8373A9542526DC3D0038ABB8 /* WorkoutTypeViewController.swift in Sources */,
 				8373A94B2526D4490038ABB8 /* PoseBuilderConfiguration.swift in Sources */,
 				8373A94F2526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
 				8373A94D2526D4490038ABB8 /* PoseNet.swift in Sources */,

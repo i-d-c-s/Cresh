@@ -35,6 +35,17 @@ class WorkOutsGridViewController: UIViewController, UICollectionViewDelegate, UI
         layout.itemSize = CGSize(width: width, height: width * 1.125)
     }
     
+    func notImplementedAlert(){
+        let alert = UIAlertController(title: "Error", message: "Feature Coming Soon", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.workOuts.count
     }
@@ -45,15 +56,19 @@ class WorkOutsGridViewController: UIViewController, UICollectionViewDelegate, UI
         return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (self.workOuts[indexPath.row] == "squats") {
+            self.performSegue(withIdentifier: "squatSegue", sender: nil)
+        } else if (self.workOuts[indexPath.row] == "pushUps") {
+            self.performSegue(withIdentifier: "pushUpSegue", sender: nil)
+        } else{
+            self.notImplementedAlert()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

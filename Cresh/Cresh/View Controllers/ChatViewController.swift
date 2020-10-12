@@ -89,7 +89,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(error.localizedDescription)
             } else if let objects = objects {
                 self.chatMessages = objects
-                print(self.chatMessages)
                 self.tableView.reloadData()
             }
         }
