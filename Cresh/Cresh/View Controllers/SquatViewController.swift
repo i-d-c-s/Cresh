@@ -95,6 +95,7 @@ class SquatViewController: UIViewController, ConfigurationViewControllerDelegate
     }
     
     @IBAction func settingsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "workoutSegue", sender: nil)
     }
     
     @IBAction func beginSquatting(_ sender: Any) {

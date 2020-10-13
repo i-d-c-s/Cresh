@@ -1263,21 +1263,6 @@
             </objects>
             <point key="canvasLocation" x="-3187" y="4525"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="35v-P8-1b6">
-            <objects>
-                <viewController id="a0D-1t-VlM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dw1-Ph-zZc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bgS-i0-FI7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhx-P4-nQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="696" y="4525"/>
-        </scene>
         <!--Squat View Controller-->
         <scene sceneID="Xfx-qZ-Zbv">
             <objects>
@@ -1471,6 +1456,7 @@
                         <outlet property="previewImageView" destination="y7w-4E-gg2" id="Cnq-tc-sTg"/>
                         <outlet property="startButton" destination="iyg-gq-ejc" id="nmh-gl-MT8"/>
                         <outlet property="timerLabel" destination="nrU-5k-DT6" id="kkv-Kb-nq5"/>
+                        <segue destination="tn8-Cn-JJI" kind="presentation" identifier="workoutSegue" modalPresentationStyle="fullScreen" id="9gh-S0-KyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPS-57-Nd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1505,8 +1491,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Settings" id="PT7-cO-soN">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uRn-4U-o3o"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZOv-UL-nyr"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uRn-4U-o3o">
+                                            <connections>
+                                                <action selector="backButton:" destination="tn8-Cn-JJI" id="wpl-yX-f3j"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="ZOv-UL-nyr">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="tn8-Cn-JJI" id="9t8-Do-1Zf"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1539,7 +1533,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-4O-Owd">
-                                <rect key="frame" x="20" y="471" width="88" height="25"/>
+                                <rect key="frame" x="20" y="471" width="123" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Height: ??">
@@ -1555,10 +1549,16 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="45" translatesAutoresizingMaskIntoConstraints="NO" id="wyf-HH-rMS">
                                 <rect key="frame" x="37" y="309" width="341" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="tn8-Cn-JJI" eventType="valueChanged" id="wFs-se-DXZ"/>
+                                </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ASC-M7-ZXJ">
                                 <rect key="frame" x="183" y="253" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="timeSwitchedMoved:" destination="tn8-Cn-JJI" eventType="valueChanged" id="y1e-gW-xpI"/>
+                                </connections>
                             </switch>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJS-TT-9Ah">
                                 <rect key="frame" x="0.0" y="551" width="414" height="279"/>
@@ -1582,6 +1582,13 @@
                         <viewLayoutGuide key="safeArea" id="Dw1-MZ-dDS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="NDU-4O-Owd" id="Amp-ST-Iqs"/>
+                        <outlet property="pickerView" destination="MJS-TT-9Ah" id="cYf-ua-OsQ"/>
+                        <outlet property="slider" destination="wyf-HH-rMS" id="lkH-Nm-qOa"/>
+                        <outlet property="timeLabel" destination="OTu-w7-bjG" id="mWi-mN-cp5"/>
+                        <outlet property="timeSwitch" destination="ASC-M7-ZXJ" id="0Js-JE-2oG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA4-b6-gN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
