@@ -12,6 +12,7 @@
 		39DFD21FC63E12B144E17893 /* Pods_Cresh_CreshUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8812795677F7ADCA8CA012D /* Pods_Cresh_CreshUITests.framework */; };
 		7DCF84614AAA9ADC54E72BCE /* Pods_CreshTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A57962EE4FC4E2A65472AF6 /* Pods_CreshTests.framework */; };
 		831167A125345F9B00BD4757 /* SquatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831167A025345F9B00BD4757 /* SquatViewController.swift */; };
+		8323E9B52536574E00A86EDC /* WorkOutSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */; };
 		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
 		834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4680251AEE4300A0CA66 /* SceneDelegate.swift */; };
 		834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4684251AEE4300A0CA66 /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		60BFA13BC975C9108127DCD9 /* Pods-Cresh-CreshUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cresh-CreshUITests.release.xcconfig"; path = "Target Support Files/Pods-Cresh-CreshUITests/Pods-Cresh-CreshUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7A57962EE4FC4E2A65472AF6 /* Pods_CreshTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreshTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831167A025345F9B00BD4757 /* SquatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatViewController.swift; sourceTree = "<group>"; };
+		8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSettingViewController.swift; sourceTree = "<group>"; };
 		834D467B251AEE4300A0CA66 /* Cresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D467E251AEE4300A0CA66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834D4680251AEE4300A0CA66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				83EDCDD1252DC15A0037999B /* MinorGroupDetailViewController.swift */,
 				83EDCDD6252DDF940037999B /* NotificationViewController.swift */,
 				831167A025345F9B00BD4757 /* SquatViewController.swift */,
+				8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				8373A94A2526D4490038ABB8 /* PoseBuilder.swift in Sources */,
 				83EDCDC8252C968F0037999B /* GroupDetailViewController.swift in Sources */,
 				8373A9432526D4490038ABB8 /* CGImage+Extension.swift in Sources */,
+				8323E9B52536574E00A86EDC /* WorkOutSettingViewController.swift in Sources */,
 				83EDCDB1252C81100037999B /* ChatViewController.swift in Sources */,
 				831167A125345F9B00BD4757 /* SquatViewController.swift in Sources */,
 			);

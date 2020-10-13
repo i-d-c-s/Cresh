@@ -39,7 +39,8 @@ class ProfileViewController: UIViewController {
             self.profileImage.file = (imageData as! PFFileObject)
             self.profileImage.loadInBackground()
         }
-        self.usernameLabel.text = String(format: "@%s", user.username!)
+        let username = user.username
+        self.usernameLabel.text = "@\(username!)"
         var lost = user.object(forKey: "Lost") as? Int
         if lost  == nil {
             lost = 0
@@ -73,7 +74,7 @@ class ProfileViewController: UIViewController {
         if pushUps == nil {
             self.numPushupLabel.text = "PushUps: 0"
         } else {
-            self.numSquatsLabel.text = String(format: "PushUps: %d", pushUps!)
+            self.numPushupLabel.text = String(format: "PushUps: %d", pushUps!)
         }
         let inclinePushUps = user.object(forKey: "inclinePushUps") as? Int
         if inclinePushUps == nil {
