@@ -26,6 +26,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        populateView()
     }
     
     func populateView() {
@@ -38,7 +39,7 @@ class ProfileViewController: UIViewController {
             self.profileImage.loadInBackground()
         }
         self.usernameLabel.text = user.username
-        self.schoolLabel.text = (user.object(forKey: "School") as! String)
+        //self.schoolLabel.text = (user.object(forKey: "School") as! String)
         
     }
     
