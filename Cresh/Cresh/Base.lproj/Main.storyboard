@@ -1701,6 +1701,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="genderLabel" destination="ftp-vd-iIo" id="iR5-lW-ZTR"/>
                         <outlet property="numChallengesLabel" destination="zWU-MD-IOq" id="8j6-PZ-OMc"/>
                         <outlet property="numDeclinePushupLabel" destination="CBj-8r-ZRo" id="j4x-Lo-azH"/>
                         <outlet property="numInclinePushupLabel" destination="Gxw-5J-F6t" id="d9V-0M-KOh"/>

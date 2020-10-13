@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var segmentedController: UISegmentedControl!
+    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var numPushupLabel: UILabel!
     @IBOutlet weak var numInclinePushupLabel: UILabel!
     @IBOutlet weak var numDeclinePushupLabel: UILabel!
@@ -38,9 +39,42 @@ class ProfileViewController: UIViewController {
             self.profileImage.file = (imageData as! PFFileObject)
             self.profileImage.loadInBackground()
         }
-        self.usernameLabel.text = user.username
-        //self.schoolLabel.text = (user.object(forKey: "School") as! String)
-        
+        self.usernameLabel.text = String(format: "@%s", user.username)
+        var lost = user.object(forKey: "Lost") as? Int
+        if lost  == nil {
+            lost = 0
+        }
+        self.numLossesLabel.text = String(format: "Lost: %d", lost)
+        var wins = user.object(forKey: "Lost") as? Int
+        if wins == nil {
+            wins = 0
+        }
+        self.numWinsLabel.text = String(format: "Won: %d", wins)
+        self.numChallengesLabel.text = String(format: "Challenges: %d", wins + lost)
+        var school = user.object(forKey: "School") as? String
+        if school == nil{
+            self.schoolLabel.alpha = 0
+        } else {
+            self.schoolLabel.text = school
+        }
+        var gender = user.object(forKey: "Gender") as? String
+        if gender == nil {
+            self.genderLabel.alpha = 0
+        } else {
+            self.genderLabel.text = gender
+        }
+        var squats = user.object(forKey: "squats") as? Int
+        if squats == nil {
+            self.numSquatsLabel.text = "Squats: 0"
+        } else {
+            self.numSquatsLabel.text = String(format: "Squats: %d", squats)
+        }
+        var pushUps = user.object(forKey: "pushUps") as? Int
+        if pushUps == nil {
+            self.numPushupLabel.text = "PushUps: 0"
+        } else {
+            self.numSquatsLabel.text = String(format: "PushUps: %d", pushUps)
+        }
     }
     
     @IBAction func dataFormatChanged(_ sender: Any) {
