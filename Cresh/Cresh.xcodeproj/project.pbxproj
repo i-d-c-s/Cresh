@@ -15,6 +15,8 @@
 		8323E9B52536574E00A86EDC /* WorkOutSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */; };
 		8323E9BA25366B0300A86EDC /* RandChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */; };
 		8323E9E525377AD700A86EDC /* UsersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */; };
+		8323E9EA25377B9800A86EDC /* MainSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9E925377B9800A86EDC /* MainSettingsViewController.swift */; };
+		8323E9EF25377DBE00A86EDC /* GroupChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9EE25377DBE00A86EDC /* GroupChallengeViewController.swift */; };
 		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
 		834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4680251AEE4300A0CA66 /* SceneDelegate.swift */; };
 		834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4684251AEE4300A0CA66 /* Main.storyboard */; };
@@ -94,6 +96,8 @@
 		8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSettingViewController.swift; sourceTree = "<group>"; };
 		8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandChallengeViewController.swift; sourceTree = "<group>"; };
 		8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProfileViewController.swift; sourceTree = "<group>"; };
+		8323E9E925377B9800A86EDC /* MainSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsViewController.swift; sourceTree = "<group>"; };
+		8323E9EE25377DBE00A86EDC /* GroupChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChallengeViewController.swift; sourceTree = "<group>"; };
 		834D467B251AEE4300A0CA66 /* Cresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D467E251AEE4300A0CA66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834D4680251AEE4300A0CA66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -402,6 +406,8 @@
 				8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */,
 				8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */,
 				8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */,
+				8323E9E925377B9800A86EDC /* MainSettingsViewController.swift */,
+				8323E9EE25377DBE00A86EDC /* GroupChallengeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				83B89C6C251C873900A88920 /* LoginViewController.swift in Sources */,
 				8373A9462526D4490038ABB8 /* Joint.swift in Sources */,
 				8373A93F2526D4490038ABB8 /* ConfigurationViewController.swift in Sources */,
+				8323E9EF25377DBE00A86EDC /* GroupChallengeViewController.swift in Sources */,
 				834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */,
 				8373A94C2526D4490038ABB8 /* PoseNetOutput.swift in Sources */,
 				8373A9422526D4490038ABB8 /* CGPoint+Extension.swift in Sources */,
@@ -676,6 +683,7 @@
 				8373A94E2526D4490038ABB8 /* PoseNetInput.swift in Sources */,
 				297EE740252A5F5400C341C7 /* GroupChatCell.swift in Sources */,
 				8373A9452526D4490038ABB8 /* VideoCapture.swift in Sources */,
+				8323E9EA25377B9800A86EDC /* MainSettingsViewController.swift in Sources */,
 				8373A9412526D4490038ABB8 /* GradientOverlayView.swift in Sources */,
 				29BDE1732521389900CC40F1 /* SignUpViewController.swift in Sources */,
 				83EDCDCD252CA05C0037999B /* GroupDetailCell.swift in Sources */,
