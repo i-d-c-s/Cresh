@@ -91,6 +91,7 @@ class SquatViewController: UIViewController, ConfigurationViewControllerDelegate
             }
             user?.setObject(self.squatCounter + currentSquats!, forKey: "squats" )
             user?.setObject(currentSquatTrack!, forKey: "SquatTrack")
+            user?.saveInBackground()
         }
     }
     
@@ -297,7 +298,7 @@ class SquatViewController: UIViewController, ConfigurationViewControllerDelegate
                            let knees_check = abs(self.current[1] - self.previous[1]) >= Float(change[1]) && abs(self.current[6] - self.previous[6]) >= Float(change[6])
                            let eyes_check = abs(self.current[4] - self.previous[4]) >= Float(change[4]) && abs(self.current[9] - self.previous[9]) >= Float(change[9])
                            
-                           if hips_check && knees_check && eyes_check { // If it does meet minimum required value
+                           if hips_check && knees_check || eyes_check { // If it does meet minimum required value
                                var fall = 0
                                var rise = 0
                                //Get number of data points that rise and fall
