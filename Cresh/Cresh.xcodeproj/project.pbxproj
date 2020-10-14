@@ -14,6 +14,7 @@
 		831167A125345F9B00BD4757 /* SquatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831167A025345F9B00BD4757 /* SquatViewController.swift */; };
 		8323E9B52536574E00A86EDC /* WorkOutSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */; };
 		8323E9BA25366B0300A86EDC /* RandChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */; };
+		8323E9E525377AD700A86EDC /* UsersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */; };
 		834D467F251AEE4300A0CA66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D467E251AEE4300A0CA66 /* AppDelegate.swift */; };
 		834D4681251AEE4300A0CA66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834D4680251AEE4300A0CA66 /* SceneDelegate.swift */; };
 		834D4686251AEE4300A0CA66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834D4684251AEE4300A0CA66 /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		831167A025345F9B00BD4757 /* SquatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatViewController.swift; sourceTree = "<group>"; };
 		8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSettingViewController.swift; sourceTree = "<group>"; };
 		8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandChallengeViewController.swift; sourceTree = "<group>"; };
+		8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProfileViewController.swift; sourceTree = "<group>"; };
 		834D467B251AEE4300A0CA66 /* Cresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834D467E251AEE4300A0CA66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834D4680251AEE4300A0CA66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				831167A025345F9B00BD4757 /* SquatViewController.swift */,
 				8323E9B42536574E00A86EDC /* WorkOutSettingViewController.swift */,
 				8323E9B925366B0300A86EDC /* RandChallengeViewController.swift */,
+				8323E9E425377AD500A86EDC /* UsersProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				8373A93E2526D4490038ABB8 /* PoseImageView.swift in Sources */,
 				8373A94B2526D4490038ABB8 /* PoseBuilderConfiguration.swift in Sources */,
 				8373A94F2526D4490038ABB8 /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
+				8323E9E525377AD700A86EDC /* UsersProfileViewController.swift in Sources */,
 				8373A94D2526D4490038ABB8 /* PoseNet.swift in Sources */,
 				8373A94A2526D4490038ABB8 /* PoseBuilder.swift in Sources */,
 				83EDCDC8252C968F0037999B /* GroupDetailViewController.swift in Sources */,

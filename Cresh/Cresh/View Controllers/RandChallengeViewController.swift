@@ -30,10 +30,11 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
     var current = [Float]() // Current Squatting data
     var previous_action: String = "r"    // Current State of body
     var timer = Timer() // Timer For Squat App
-    var working = false
+    var working = true
     var heightEstimator = 5.58
     
     var randSquatCounter = 0
+    var switchImage = "squatDown"
     
     private let videoCapture = VideoCapture()
     private var poseNet: PoseNet!
@@ -48,7 +49,11 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let user = PFUser.current()
+        user?.setObject(0, forKey: "currentCount")
+        user?.saveInBackground()
+        
+        timerType()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +92,13 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
     func updateRandUserSquatCount(){
         let count = self.randomUser.object(forKey: "currentCount") as? Int
         if count != self.randSquatCounter {
-    
+            if switchImage == "squatDown"{
+                self.randPreviewImageView.image = UIImage(named: "squatUp")
+            } else{
+                self.randPreviewImageView.image = UIImage(named: "squatDown")
+            }
+            self.randSquatCounter = count ?? 0
+            self.randCounterLabel.text = "\(self.randSquatCounter)"
         }
     }
     
@@ -232,6 +243,9 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                        }
                    }
                    
+                   
+                   updateRandUserSquatCount()
+            
                    if check{
                        if !self.previous.isEmpty { //If previous points do exist
                            //check if change btw previous data and current data meet minimum required value
@@ -239,7 +253,7 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                            let knees_check = abs(self.current[1] - self.previous[1]) >= Float(change[1]) && abs(self.current[6] - self.previous[6]) >= Float(change[6])
                            let eyes_check = abs(self.current[4] - self.previous[4]) >= Float(change[4]) && abs(self.current[9] - self.previous[9]) >= Float(change[9])
                            
-                           if hips_check && knees_check && eyes_check { // If it does meet minimum required value
+                           if hips_check && knees_check { // If it does meet minimum required value
                                var fall = 0
                                var rise = 0
                                //Get number of data points that rise and fall
@@ -253,6 +267,7 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                                if self.previous_action == "r" && current_action == "f" { //When body is rising after a squat, increment counter by 1
                                    self.squatCounter += 1
                                    self.counterLabel.text = String(self.squatCounter)
+                                   updateUserSquatCount()
                                }
                                self.previous_action = current_action //Assign current action to previous action
                            }
