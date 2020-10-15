@@ -29,12 +29,17 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
     var previous = [Float]()    // Previous data of squats
     var current = [Float]() // Current Squatting data
     var previous_action: String = "r"    // Current State of body
+    
     var timer = Timer() // Timer For Squat App
+    var userTimer = Timer()
+    var randUserTimer = Timer()
+    
     var working = true
     var heightEstimator = 5.58
     
     var randSquatCounter = 0
     var switchImage = "squatDown"
+    var category: String!
     
     private let videoCapture = VideoCapture()
     private var poseNet: PoseNet!
@@ -52,6 +57,19 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
         let user = PFUser.current()
         user?.setObject(0, forKey: "currentCount")
         user?.saveInBackground()
+        print("done")
+        
+        userTimer = Timer.scheduledTimer(timeInterval: 3,
+            target: self,
+            selector: #selector(updateRandUserSquatCount),
+            userInfo: nil,
+            repeats: true)
+        
+        randUserTimer = Timer.scheduledTimer(timeInterval: 3,
+            target: self,
+            selector: #selector(updateUserSquatCount),
+            userInfo: nil,
+            repeats: true)
         
         timerType()
     }
@@ -81,7 +99,7 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
         present(alertController, animated: true) {}
     }
     
-    func updateUserSquatCount() {
+    @objc func updateUserSquatCount() {
         let user = PFUser.current()
         if (self.squatCounter > 0){
             user?.setObject(self.squatCounter, forKey: "currentCount")
@@ -89,16 +107,12 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
         }
     }
     
-    func updateRandUserSquatCount(){
-        let count = self.randomUser.object(forKey: "currentCount") as? Int
-        if count != self.randSquatCounter {
-            if switchImage == "squatDown"{
-                self.randPreviewImageView.image = UIImage(named: "squatUp")
-            } else{
-                self.randPreviewImageView.image = UIImage(named: "squatDown")
-            }
-            self.randSquatCounter = count ?? 0
-            self.randCounterLabel.text = "\(self.randSquatCounter)"
+    @objc func updateRandUserSquatCount(){
+        self.randomUser.fetchInBackground { (success, error) in
+            let count = self.randomUser.object(forKey: "currentCount") as! Int
+            print(count)
+            self.randSquatCounter = count
+            self.randCounterLabel.text = String(format: "%0d", self.randSquatCounter)
         }
     }
     
@@ -125,6 +139,41 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
         if self.timeCounter == 0{
             self.working = false
             self.timer.invalidate()
+            self.userTimer.invalidate()
+            self.randUserTimer.invalidate()
+            updateChallenges()
+        }
+    }
+    
+    func winnerAlert(){
+        let alert = UIAlertController(title: self.category, message: "Nice one!", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+
+        let when = DispatchTime.now() + 4
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          alert.dismiss(animated: true, completion: nil)
+          self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func updateChallenges(){
+        let user = PFUser.current()!
+        let wons = user.object(forKey: "Won") as! Int
+        let losses = user.object(forKey: "Lost") as! Int
+        if squatCounter > randSquatCounter{
+            self.category = "You won!!"
+            user.setObject(wons + 1, forKey: "Won")
+        } else{
+            self.category = "You lost!!"
+            print(losses)
+            user.setObject(losses + 1, forKey: "Lost")
+        }
+        user.setObject(0, forKey: "currentCount")
+        user.saveInBackground { (success, error) in
+            if (error == nil) {
+                self.winnerAlert()
+            }
         }
     }
     
@@ -232,9 +281,9 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                    self.current = [left_hip_y, left_knee_y, left_ankle_y, left_ear_y, left_eye_y, right_hip_y, right_knee_y, right_ankle_y, right_ear_y, right_eye_y, nose_y]
                    // Array of minimum required change in current data and previous data
                    var change = [130.0, 10.0, 0.0, 600.0, 650.0, 130.0, 10.0, 0.0, 600.0, 650.0, 550.0]
-                   for y in 0..<change.count{
-                    change[y] *= self.heightEstimator
-                    }
+//                   for y in 0..<change.count{
+//                    change[y] *= self.heightEstimator
+//                    }
                    var check = true
                    //Ensure that all points are sin and are non-zero
                    for item in self.current{
@@ -243,15 +292,13 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                        }
                    }
                    
-                   
-                   updateRandUserSquatCount()
             
                    if check{
                        if !self.previous.isEmpty { //If previous points do exist
                            //check if change btw previous data and current data meet minimum required value
                            let hips_check = abs(self.current[0] - self.previous[0]) >= Float(change[0]) && abs(self.current[5] - self.previous[5]) >= Float(change[5])
                            let knees_check = abs(self.current[1] - self.previous[1]) >= Float(change[1]) && abs(self.current[6] - self.previous[6]) >= Float(change[6])
-                           let eyes_check = abs(self.current[4] - self.previous[4]) >= Float(change[4]) && abs(self.current[9] - self.previous[9]) >= Float(change[9])
+                           //let eyes_check = abs(self.current[4] - self.previous[4]) >= Float(change[4]) && abs(self.current[9] - self.previous[9]) >= Float(change[9])
                            
                            if hips_check && knees_check { // If it does meet minimum required value
                                var fall = 0
@@ -263,11 +310,12 @@ class RandChallengeViewController: UIViewController, ConfigurationViewController
                                }
                
                                let current_action = rise >= fall ? "r" : "f" // Compare rise and fall values to determine if body is really falling or rising
-                        
+                             
                                if self.previous_action == "r" && current_action == "f" { //When body is rising after a squat, increment counter by 1
                                    self.squatCounter += 1
                                    self.counterLabel.text = String(self.squatCounter)
-                                   updateUserSquatCount()
+                                   print(self.squatCounter)
+                                   
                                }
                                self.previous_action = current_action //Assign current action to previous action
                            }

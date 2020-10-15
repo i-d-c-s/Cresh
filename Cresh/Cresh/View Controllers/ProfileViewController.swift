@@ -45,13 +45,13 @@ class ProfileViewController: UIViewController {
         if lost  == nil {
             lost = 0
         }
-        self.numLossesLabel.text = String(format: "Lost: %d", lost!)
-        var wins = user.object(forKey: "Lost") as? Int
+        self.numLossesLabel.text = String(format: "Lost: %0d", lost!)
+        var wins = user.object(forKey: "Won") as? Int
         if wins == nil {
             wins = 0
         }
-        self.numWinsLabel.text = String(format: "Won: %d", wins!)
-        self.numChallengesLabel.text = String(format: "Challenges: %d", wins! + lost!)
+        self.numWinsLabel.text = String(format: "Won: %0d", wins!)
+        self.numChallengesLabel.text = String(format: "Challenges: %0d", wins! + lost!)
         let school = user.object(forKey: "School") as? String
         if school == nil{
             self.schoolLabel.alpha = 0
@@ -68,25 +68,25 @@ class ProfileViewController: UIViewController {
         if squats == nil {
             self.numSquatsLabel.text = "Squats: 0"
         } else {
-            self.numSquatsLabel.text = String(format: "Squats: %d", squats!)
+            self.numSquatsLabel.text = String(format: "Squats: %0d", squats!)
         }
         let pushUps = user.object(forKey: "pushUps") as? Int
         if pushUps == nil {
             self.numPushupLabel.text = "PushUps: 0"
         } else {
-            self.numPushupLabel.text = String(format: "PushUps: %d", pushUps!)
+            self.numPushupLabel.text = String(format: "PushUps: %0d", pushUps!)
         }
         let inclinePushUps = user.object(forKey: "inclinePushUps") as? Int
         if inclinePushUps == nil {
             self.numInclinePushupLabel.text = "Incline PushUps: 0"
         } else {
-            self.numInclinePushupLabel.text = String(format: "Incline PushUps: %d", inclinePushUps!)
+            self.numInclinePushupLabel.text = String(format: "Incline PushUps: %0d", inclinePushUps!)
         }
         let declinePushUps = user.object(forKey: "declinePushUps") as? Int
         if declinePushUps == nil {
             self.numDeclinePushupLabel.text = "Decline PushUps: 0"
         } else {
-            self.numDeclinePushupLabel.text = String(format: "Decline PushUps: %d", declinePushUps!)
+            self.numDeclinePushupLabel.text = String(format: "Decline PushUps: %0d", declinePushUps!)
         }
     }
     

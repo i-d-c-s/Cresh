@@ -953,12 +953,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="W.O.R.K.O.U.T.S" id="QLa-f5-kfE">
-                        <barButtonItem key="rightBarButtonItem" image="challengeIcon30px" id="fs9-Oz-nfW"/>
+                        <barButtonItem key="rightBarButtonItem" image="challengeIcon30px" id="fs9-Oz-nfW">
+                            <connections>
+                                <action selector="challengeButtonTapped:" destination="f0i-FX-tgd" id="YWe-Dv-DUR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="whb-FM-Vly" id="y8n-uF-52e"/>
                         <segue destination="R9O-yc-eGM" kind="presentation" identifier="squatSegue" modalPresentationStyle="fullScreen" id="Ciq-Ql-ndj"/>
                         <segue destination="yLB-9j-5qI" kind="presentation" identifier="pushUpSegue" modalPresentationStyle="fullScreen" id="awD-Hw-SGz"/>
+                        <segue destination="lq7-OJ-zFf" kind="presentation" identifier="randChallengeSegue" modalPresentationStyle="fullScreen" id="zPJ-2s-O45"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bx7-Ef-uxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1647,9 +1652,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFr-On-m5V" customClass="PoseImageView" customModule="Cresh" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFr-On-m5V" customClass="PoseImageView" customModule="Cresh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="207" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="9qs-BA-ld8"/>
+                                    <constraint firstAttribute="height" constant="896" id="MGF-E0-eJu"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="segmentLineWidth">
                                         <integer key="value" value="3"/>
@@ -1665,9 +1673,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxD-F3-Gvj" customClass="PoseImageView" customModule="Cresh" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxD-F3-Gvj" customClass="PoseImageView" customModule="Cresh" customModuleProvider="target">
                                 <rect key="frame" x="207" y="0.0" width="207" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="IIA-B3-JLA"/>
+                                    <constraint firstAttribute="height" constant="896" id="hEf-sj-G1A"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="segmentLineWidth">
                                         <integer key="value" value="3"/>
@@ -1683,10 +1694,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-vT-xOS" customClass="GradientOverlayView" customModule="Cresh" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-vT-xOS" customClass="GradientOverlayView" customModule="Cresh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="207" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9JU-To-yT3"/>
+                                    <constraint firstAttribute="width" constant="207" id="Mm9-m4-Tqt"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1696,10 +1710,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBB-7f-uWm" customClass="GradientOverlayView" customModule="Cresh" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBB-7f-uWm" customClass="GradientOverlayView" customModule="Cresh" customModuleProvider="target">
                                 <rect key="frame" x="207" y="0.0" width="207" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="2Uv-9n-3J9"/>
+                                    <constraint firstAttribute="height" constant="128" id="E3b-FB-wck"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                         <color key="value" red="0.47843137250000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1709,9 +1726,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-3Z-pMk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-3Z-pMk">
                                 <rect key="frame" x="20" y="357" width="70" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Count">
                                         <attributes>
@@ -1723,9 +1739,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x21-On-YU5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x21-On-YU5">
                                 <rect key="frame" x="324" y="357" width="70" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Count">
                                         <attributes>
@@ -1737,9 +1752,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-OX-NDq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-OX-NDq">
                                 <rect key="frame" x="18" y="396" width="75" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -1751,9 +1765,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-EO-Zmh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-EO-Zmh">
                                 <rect key="frame" x="319" y="396" width="75" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -1765,9 +1778,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-44-xhw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-44-xhw">
                                 <rect key="frame" x="177" y="136" width="60" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZNc-kd-T90"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Time">
                                         <attributes>
@@ -1778,9 +1793,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH1-pn-hhU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH1-pn-hhU">
                                 <rect key="frame" x="152" y="167" width="110" height="40.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="00:00">
                                         <attributes>
@@ -1794,6 +1808,42 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i6g-PP-bmA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="bottom" secondItem="5HJ-EO-Zmh" secondAttribute="bottom" constant="362" id="2yw-JN-kvn"/>
+                            <constraint firstItem="x21-On-YU5" firstAttribute="top" secondItem="ZBB-7f-uWm" secondAttribute="bottom" constant="229" id="37d-wi-NvO"/>
+                            <constraint firstItem="ZBB-7f-uWm" firstAttribute="trailing" secondItem="i6g-PP-bmA" secondAttribute="trailing" id="4Df-LW-M5V"/>
+                            <constraint firstItem="rFr-On-m5V" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" id="5Rf-va-Ti5"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="leading" secondItem="Wxu-OX-NDq" secondAttribute="trailing" constant="114" id="ALm-sg-cuM"/>
+                            <constraint firstItem="Baf-3Z-pMk" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" constant="20" id="Akr-yH-Ysc"/>
+                            <constraint firstItem="jeH-44-xhw" firstAttribute="top" secondItem="aZh-vT-xOS" secondAttribute="bottom" constant="8" symbolic="YES" id="FYh-KM-7NV"/>
+                            <constraint firstItem="aZh-vT-xOS" firstAttribute="top" secondItem="Oto-Ay-w6N" secondAttribute="top" id="HCC-di-7ZR"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="trailing" secondItem="5HJ-EO-Zmh" secondAttribute="trailing" constant="20" id="I2s-2z-FIG"/>
+                            <constraint firstItem="ZBB-7f-uWm" firstAttribute="leading" secondItem="rFr-On-m5V" secondAttribute="trailing" id="Ioj-x4-Dak"/>
+                            <constraint firstAttribute="bottom" secondItem="xxD-F3-Gvj" secondAttribute="bottom" id="Ogu-z0-39F"/>
+                            <constraint firstItem="5HJ-EO-Zmh" firstAttribute="top" secondItem="x21-On-YU5" secondAttribute="bottom" constant="16" id="Ps1-i1-mjx"/>
+                            <constraint firstAttribute="bottom" secondItem="rFr-On-m5V" secondAttribute="bottom" id="Q3Z-34-OSB"/>
+                            <constraint firstItem="Wxu-OX-NDq" firstAttribute="top" secondItem="Baf-3Z-pMk" secondAttribute="bottom" constant="16" id="T3l-hM-7SV"/>
+                            <constraint firstItem="XH1-pn-hhU" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" constant="152" id="TIZ-Cr-a2O"/>
+                            <constraint firstItem="rFr-On-m5V" firstAttribute="top" secondItem="Oto-Ay-w6N" secondAttribute="top" id="WD3-qD-KOV"/>
+                            <constraint firstItem="Baf-3Z-pMk" firstAttribute="top" secondItem="aZh-vT-xOS" secondAttribute="bottom" constant="229" id="WzO-ai-E29"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="bottom" secondItem="XH1-pn-hhU" secondAttribute="bottom" constant="654.5" id="XKB-Gm-Zn0"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="leading" secondItem="rFr-On-m5V" secondAttribute="trailing" id="bPP-4Q-y4F"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="bottom" secondItem="Wxu-OX-NDq" secondAttribute="bottom" constant="362" id="bo0-AI-Ybf"/>
+                            <constraint firstItem="5HJ-EO-Zmh" firstAttribute="leading" secondItem="rFr-On-m5V" secondAttribute="trailing" constant="112" id="brL-QE-8Dx"/>
+                            <constraint firstItem="ZBB-7f-uWm" firstAttribute="top" secondItem="Oto-Ay-w6N" secondAttribute="top" id="fTq-gQ-hDP"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="trailing" secondItem="x21-On-YU5" secondAttribute="trailing" constant="20" id="gtE-br-e0v"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="trailing" secondItem="jeH-44-xhw" secondAttribute="trailing" constant="177" id="hMH-ec-SLf"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="leading" secondItem="rFr-On-m5V" secondAttribute="trailing" id="i7t-n8-9Wm"/>
+                            <constraint firstItem="jeH-44-xhw" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" constant="177" id="mWw-i4-o20"/>
+                            <constraint firstItem="x21-On-YU5" firstAttribute="leading" secondItem="rFr-On-m5V" secondAttribute="trailing" constant="117" id="pux-6H-5LW"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="leading" secondItem="Baf-3Z-pMk" secondAttribute="trailing" constant="117" id="sry-Na-b15"/>
+                            <constraint firstItem="i6g-PP-bmA" firstAttribute="trailing" secondItem="XH1-pn-hhU" secondAttribute="trailing" constant="152" id="uUe-kU-eWb"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="trailing" secondItem="i6g-PP-bmA" secondAttribute="trailing" id="vNe-Xs-lgV"/>
+                            <constraint firstItem="Wxu-OX-NDq" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" constant="18" id="wBA-O1-HMn"/>
+                            <constraint firstItem="XH1-pn-hhU" firstAttribute="top" secondItem="jeH-44-xhw" secondAttribute="bottom" constant="8" symbolic="YES" id="xp1-cR-csY"/>
+                            <constraint firstItem="xxD-F3-Gvj" firstAttribute="top" secondItem="Oto-Ay-w6N" secondAttribute="top" id="ydS-z2-lwB"/>
+                            <constraint firstItem="aZh-vT-xOS" firstAttribute="leading" secondItem="i6g-PP-bmA" secondAttribute="leading" id="zbK-cc-px8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="Wxu-OX-NDq" id="K8O-W6-ua8"/>
@@ -1805,7 +1855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ng-9a-uEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3350.7246376811595" y="3570.5357142857142"/>
+            <point key="canvasLocation" x="696" y="5494"/>
         </scene>
         <!--Work Out Setting View Controller-->
         <scene sceneID="i82-Zl-t28">
@@ -2346,7 +2396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sh-Qv-rmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="5494"/>
+            <point key="canvasLocation" x="5220" y="4582"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="trF-eX-1TO">
@@ -2425,7 +2475,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cAT-xa-aFA"/>
-        <segue reference="6PJ-oy-9Vh"/>
+        <segue reference="3MD-oC-aYh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Rectangle 1loginButton" width="196" height="29"/>
