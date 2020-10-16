@@ -8,8 +8,9 @@
 
 import UIKit
 import Parse
+import Charts
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var profileImage: PFImageView!
     @IBOutlet weak var numChallengesLabel: UILabel!
@@ -24,17 +25,85 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var numDeclinePushupLabel: UILabel!
     @IBOutlet weak var numSquatsLabel: UILabel!
     
+    var lineChartView = LineChartView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         populateView()
+        constructingChart()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         populateView()
+        constructingChart()
     }
     
+    func constructingChart() {
+        self.lineChartView.delegate = self
+        self.lineChartView.backgroundColor = UIColor.init(red: 2566.0, green: 256.0, blue: 256.0, alpha: 1)
+        self.lineChartView.chartDescription!.enabled = false
+        self.lineChartView.pinchZoomEnabled = false
+        self.lineChartView.dragEnabled = false
+        self.lineChartView.setScaleEnabled(true)
+        self.lineChartView.legend.enabled = false
+        self.lineChartView.xAxis.enabled = false
+        self.lineChartView.rightAxis.enabled = false
+        self.lineChartView.legend.textColor = .black
+        self.view.addSubview(self.lineChartView)
+    }
+    
+    func populateChart(){
+        
+        self.numPushupLabel.alpha = 0
+        self.numInclinePushupLabel.alpha = 0
+        self.numDeclinePushupLabel.alpha = 0
+        self.numSquatsLabel.alpha = 0
+        
+        self.lineChartView.alpha = 1
+        self.lineChartView.frame = CGRect(x: 20, y: self.view.frame.size.height / 2, width: self.view.frame.size.width - 40, height: (self.view.frame.size.height - self.view.frame.size.height / 1.5) - 10)
+        let squatData = PFUser.current()?.object(forKey: "SquatTrack") as! [Int]
+        var modelData = [String]()
+        for index in stride(from: squatData.count, to: 0, by: -1){
+            modelData.append(String(format: "%0d", index))
+        }
+
+        if squatData.count > 0{
+            self.lineChartView.data = setChart(dataPoints: modelData, values: squatData)
+        } else{
+            self.lineChartView.data = nil
+        }
+    }
+    
+    func setChart(dataPoints: [String], values: [Int]) -> LineChartData {
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(x: Double(i), y: Double(values[i]))
+            dataEntries.append(dataEntry)
+        }
+        var colors: [UIColor] = []
+        for _ in 0..<dataPoints.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: "Record")
+        let lineChartData = LineChartData(dataSet: lineChartDataSet)
+        lineChartDataSet.colors = colors
+        return lineChartData
+    }
+
     func populateView() {
+        
+        self.numPushupLabel.alpha = 1
+        self.numInclinePushupLabel.alpha = 1
+        self.numDeclinePushupLabel.alpha = 1
+        self.numSquatsLabel.alpha = 1
+        self.lineChartView.alpha = 0
+        
         let user = PFUser.current()!
         let imageData = user.object(forKey: "image")
         self.profileImage.layer.cornerRadius = 72
@@ -95,6 +164,11 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func dataFormatChanged(_ sender: Any) {
+        if (self.segmentedController.selectedSegmentIndex == 0){
+            populateView()
+        } else{
+            populateChart()
+        }
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {

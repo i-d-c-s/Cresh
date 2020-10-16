@@ -1050,10 +1050,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-AV-38a">
-                                <rect key="frame" x="0.0" y="345" width="375" height="81"/>
+                                <rect key="frame" x="0.0" y="345" width="375" height="32"/>
                                 <segments>
-                                    <segment title="Charts"/>
                                     <segment title="Stats"/>
+                                    <segment title="Charts"/>
                                 </segments>
                                 <connections>
                                     <action selector="dataChanged:" destination="StP-1d-sFN" eventType="valueChanged" id="lFh-us-pJC"/>
@@ -1138,7 +1138,7 @@
                             <constraint firstItem="8Kf-vV-9SE" firstAttribute="leading" secondItem="1Oy-LY-9c5" secondAttribute="leading" constant="16" id="SU9-vd-Ead"/>
                             <constraint firstItem="1Oy-LY-9c5" firstAttribute="bottom" secondItem="Ac3-uE-nke" secondAttribute="bottom" constant="30" id="UCZ-Wx-gnK"/>
                             <constraint firstItem="c2X-eh-j6V" firstAttribute="top" secondItem="1Oy-LY-9c5" secondAttribute="top" constant="27" id="UJp-Np-OP3"/>
-                            <constraint firstItem="ZnJ-2S-i8W" firstAttribute="top" secondItem="vYC-AV-38a" secondAttribute="bottom" constant="58" id="XNY-DJ-Iyj"/>
+                            <constraint firstItem="ZnJ-2S-i8W" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vYC-AV-38a" secondAttribute="bottom" constant="58" id="XNY-DJ-Iyj"/>
                             <constraint firstItem="7LL-g1-6D6" firstAttribute="leading" secondItem="1Oy-LY-9c5" secondAttribute="leading" constant="2" id="cHM-0k-fhw"/>
                             <constraint firstItem="A1g-xK-iEf" firstAttribute="leading" secondItem="7LL-g1-6D6" secondAttribute="trailing" constant="20" id="ckt-KC-MC5"/>
                             <constraint firstItem="nuj-MX-jHh" firstAttribute="top" secondItem="J4o-Ml-jTh" secondAttribute="bottom" constant="26" id="czp-Fi-3YR"/>
@@ -2144,8 +2144,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-qk-GoS">
                                 <rect key="frame" x="0.0" y="332" width="375" height="32"/>
                                 <segments>
-                                    <segment title="Charts"/>
                                     <segment title="Stats"/>
+                                    <segment title="Charts"/>
                                 </segments>
                                 <connections>
                                     <action selector="dataFormatChanged:" destination="pOc-vL-qUs" eventType="valueChanged" id="pF8-WI-noO"/>

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MainSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MainSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
    
     @IBOutlet weak var profileImage: PFImageView!
     @IBOutlet weak var schoolTextField: UITextField!
@@ -26,6 +26,7 @@ class MainSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         editImagePosition()
         editSchoolField()
         editGenderField()
+        
     }
     
     func editImagePosition(){
