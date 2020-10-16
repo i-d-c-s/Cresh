@@ -2256,8 +2256,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-pd-xkW">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-pd-xkW">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Settings" id="IuL-9s-vDU">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="ixi-7H-62G">
@@ -2273,8 +2274,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75F-is-6VO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75F-is-6VO">
                                 <rect key="frame" x="20" y="117" width="120" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Edit Profile...">
                                         <attributes>
@@ -2286,20 +2288,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-bu-yJS" customClass="PFImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-bu-yJS" customClass="PFImageView">
                                 <rect key="frame" x="67" y="178" width="240" height="209"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="209" id="6bc-VK-cax"/>
-                                    <constraint firstAttribute="width" constant="240" id="pP3-xz-tnJ"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-LV-xDy">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-LV-xDy">
                                 <rect key="frame" x="28" y="474" width="319" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jd-4O-lie">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jd-4O-lie">
                                 <rect key="frame" x="28" y="615" width="319" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2307,22 +2308,6 @@
                         <viewLayoutGuide key="safeArea" id="l2h-01-Z9R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="l2h-01-Z9R" firstAttribute="trailing" secondItem="75F-is-6VO" secondAttribute="trailing" constant="235" id="1xW-5P-OQm"/>
-                            <constraint firstItem="l2h-01-Z9R" firstAttribute="trailing" secondItem="Kf7-LV-xDy" secondAttribute="trailing" constant="28" id="6ke-jD-1SC"/>
-                            <constraint firstItem="l2h-01-Z9R" firstAttribute="bottom" secondItem="9jd-4O-lie" secondAttribute="bottom" constant="129" id="8EA-nz-idA"/>
-                            <constraint firstItem="9jd-4O-lie" firstAttribute="top" secondItem="Kf7-LV-xDy" secondAttribute="bottom" constant="107" id="Dye-s8-E9b"/>
-                            <constraint firstItem="y0z-pd-xkW" firstAttribute="leading" secondItem="l2h-01-Z9R" secondAttribute="leading" id="Iag-rd-gwQ"/>
-                            <constraint firstItem="75F-is-6VO" firstAttribute="top" secondItem="y0z-pd-xkW" secondAttribute="bottom" constant="29" id="Nwo-Pf-cqH"/>
-                            <constraint firstItem="Kf7-LV-xDy" firstAttribute="top" secondItem="Vcn-bu-yJS" secondAttribute="bottom" constant="87" id="ddc-0Z-fs9"/>
-                            <constraint firstItem="l2h-01-Z9R" firstAttribute="trailing" secondItem="9jd-4O-lie" secondAttribute="trailing" constant="28" id="ego-S8-X8M"/>
-                            <constraint firstItem="Vcn-bu-yJS" firstAttribute="top" secondItem="75F-is-6VO" secondAttribute="bottom" constant="36" id="f9T-DX-xn6"/>
-                            <constraint firstItem="75F-is-6VO" firstAttribute="leading" secondItem="l2h-01-Z9R" secondAttribute="leading" constant="20" id="lpf-KZ-Huf"/>
-                            <constraint firstItem="Kf7-LV-xDy" firstAttribute="leading" secondItem="l2h-01-Z9R" secondAttribute="leading" constant="28" id="oEa-0U-VQg"/>
-                            <constraint firstItem="Vcn-bu-yJS" firstAttribute="leading" secondItem="l2h-01-Z9R" secondAttribute="leading" constant="67" id="pUe-f2-rS1"/>
-                            <constraint firstItem="y0z-pd-xkW" firstAttribute="trailing" secondItem="l2h-01-Z9R" secondAttribute="trailing" id="uuH-Ub-PKN"/>
-                            <constraint firstItem="9jd-4O-lie" firstAttribute="leading" secondItem="l2h-01-Z9R" secondAttribute="leading" constant="28" id="vjF-gM-Tzh"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Rub-of-Xv8" appends="YES" id="X4X-gQ-wDz"/>
                         </connections>

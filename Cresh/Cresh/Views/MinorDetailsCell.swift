@@ -34,6 +34,9 @@ class MinorDetailsCell: UITableViewCell {
         self.profilePic.layer.borderColor = UIColor.gray.cgColor
         self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2
         self.profilePic.clipsToBounds = true
+        let imageData = member.object(forKey: "image") as? PFFileObject
+        self.profilePic.file = imageData
+        self.profilePic.loadInBackground()
     }
 
 }

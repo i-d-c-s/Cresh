@@ -48,6 +48,9 @@ class GroupDetailCell: UITableViewCell {
         self.profilePicture.layer.borderColor = UIColor.gray.cgColor
         self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width / 2
         self.profilePicture.clipsToBounds = true
+        let imageData = member.object(forKey: "image") as? PFFileObject
+        self.profilePicture.file = imageData
+        self.profilePicture.loadInBackground()
     }
 
     @objc func tapPhoto(sender: UITapGestureRecognizer) {

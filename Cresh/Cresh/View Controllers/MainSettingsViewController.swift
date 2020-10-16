@@ -18,10 +18,32 @@ class MainSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.profileImage.layer.cornerRadius = 98
+        self.profileImage.layer.cornerRadius = 86.5
         self.profileImage.layer.masksToBounds = true
         
         addTapGestureRecognizer()
+        
+        editImagePosition()
+        editSchoolField()
+        editGenderField()
+    }
+    
+    func editImagePosition(){
+        let y = (self.view.frame.size.height / 2) - 170
+        let x = (self.view.frame.size.width - 170) / 2
+        self.profileImage.frame = CGRect(x: x, y: y, width: 173, height: 173)
+    }
+    
+    func editSchoolField(){
+        self.schoolTextField.frame.size.width = self.view.frame.size.width - 40
+        self.schoolTextField.frame.origin.x = 20
+        self.schoolTextField.frame.origin.y = (self.view.frame.size.height / 2) + 100
+    }
+    
+    func editGenderField(){
+        self.genderTextField.frame.size.width = self.view.frame.size.width - 40
+        self.genderTextField.frame.origin.x = 20
+        self.genderTextField.frame.origin.y = (self.view.frame.size.height / 2) + 200
     }
     
     func errorAlert(){

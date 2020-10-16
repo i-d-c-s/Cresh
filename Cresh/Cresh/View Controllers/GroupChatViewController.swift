@@ -87,12 +87,23 @@ class GroupChatViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if(searchBar.text != ""){
-//            let descriptionPredicate =
-//                    NSPredicate(format: "description.contains(%@)",searchText)
-//            let namePredicate =
-//                    NSPredicate(format: "groupName.contains(%@)",searchText)
-//            let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [descriptionPredicate, namePredicate])
-//            self.filteredData = self.groupChats.filter { predicate.evaluate(with: $0) };
+            var namesArray = [String]()
+            for object in self.filteredData{
+                namesArray.append(object["groupName"] as! String)
+            }
+            self.filteredData.removeAll()
+            let namesFilteredArray = namesArray.filter { (item: String) -> Bool in
+                return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+            print(namesFilteredArray)
+            for object in self.groupChats {
+                if namesFilteredArray.contains(object["groupName"] as! String){
+                    self.filteredData.append(object)
+                }
+            }
+            
+        } else{
+            self.filteredData = self.groupChats
         }
         tableView.reloadData()
     }

@@ -30,6 +30,10 @@ class ProfileViewController: UIViewController {
         populateView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        populateView()
+    }
+    
     func populateView() {
         let user = PFUser.current()!
         let imageData = user.object(forKey: "image")
