@@ -65,7 +65,7 @@ class MinorGroupDetailViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! GroupDetailCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VisitorCell", for: indexPath) as! MinorDetailsCell
         cell.setMemberCell(member: self.users[indexPath.row]!)
         return cell
     }
