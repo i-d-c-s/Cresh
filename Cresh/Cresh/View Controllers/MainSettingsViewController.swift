@@ -55,7 +55,7 @@ class MainSettingsViewController: UIViewController, UIImagePickerControllerDeleg
             self.present(imagePickerVC, animated: true, completion: nil)
         }
         
-        let librarySource = UIAlertAction.init(title: "Photo Library", style: .default) { (<#UIAlertAction#>) in
+        let librarySource = UIAlertAction.init(title: "Photo Library", style: .default) { (action) in
             imagePickerVC.sourceType = .photoLibrary
             self.present(imagePickerVC, animated: true, completion: nil)
         }
