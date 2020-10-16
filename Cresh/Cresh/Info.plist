@@ -67,5 +67,9 @@
     <string>Need access to camera</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Need access to photo Library</string>
+    <key>NSPhotoLibraryUsageDescription</key>               <!-- added this for photo library permission -->
+    <string>Need library access to upload images</string> <!-- added this for photo library permission -->
+    <key>NSCameraUsageDescription</key> <!-- added this for camera permission -->
+    <string>Need camera access to take pictures</string> <!-- added this for camera permission -->
 </dict>
 </plist>

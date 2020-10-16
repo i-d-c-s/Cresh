@@ -11,13 +11,29 @@ import Parse
 
 class GroupDetailCell: UITableViewCell {
 
+    @IBOutlet weak var challengeButton: UIButton!
     @IBOutlet weak var profilePicture: PFImageView!
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
+    var delegatePhoto: myPhotoDelegate?
+    var delegateBtn: myBtnDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let photoTap = UITapGestureRecognizer.init(target: self, action: #selector(GroupDetailCell.tapPhoto(sender:)))
+        photoTap.numberOfTapsRequired = 2
+        self.profilePicture.addGestureRecognizer(photoTap)
+        self.profilePicture.isUserInteractionEnabled = true
+        
+        let btnTap = UITapGestureRecognizer.init(target: self, action: #selector(GroupDetailCell.tapPhoto(sender:)))
+        btnTap.numberOfTapsRequired = 1
+        self.challengeButton.addGestureRecognizer(btnTap)
+        self.challengeButton.isUserInteractionEnabled = true
+        
+        btnTap.shouldRequireFailure(of: photoTap)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +51,21 @@ class GroupDetailCell: UITableViewCell {
         self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.width / 2
         self.profilePicture.clipsToBounds = true
     }
+
+    @objc func tapPhoto(sender: UITapGestureRecognizer) {
+        delegatePhoto?.photoTapped()
+       }
     
-    @IBAction func didTapChallenge(_ sender: Any) {
-    }
+    @objc func tapBtn(sender: UITapGestureRecognizer) {
+        delegateBtn?.challengeBtnTapped()
+       }
+    
+}
+
+protocol myPhotoDelegate {
+    func photoTapped()
+}
+
+protocol myBtnDelegate {
+    func challengeBtnTapped()
 }

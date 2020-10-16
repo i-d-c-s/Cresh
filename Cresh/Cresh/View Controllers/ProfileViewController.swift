@@ -93,6 +93,10 @@ class ProfileViewController: UIViewController {
     @IBAction func dataFormatChanged(_ sender: Any) {
     }
     
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "settingSegue", sender: nil)
+    }
+    
     @IBAction func didTapLogout(_ sender: Any) {
         PFUser.logOutInBackground { (error) in
             if let error = error{

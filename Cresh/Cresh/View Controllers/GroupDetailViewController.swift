@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, myPhotoDelegate, myBtnDelegate {
     
     var groupDetail: PFObject!
     
@@ -19,6 +19,10 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     var users = [PFObject?]()
+    var timeTrack = 0
+    var timer = Timer()
+    var activityView: UIActivityIndicatorView!
+    var randUser: PFUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,12 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
         
         populateView()
         loadMembers()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        PFUser.current()?.setObject(false, forKey: "Looking")
+        PFUser.current()?.saveInBackground()
+        print("done")
     }
     
     func populateView(){
@@ -55,6 +65,9 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! GroupDetailCell
+        self.randUser = self.users[indexPath.row] as! PFUser
+        cell.delegateBtn = self
+        cell.delegatePhoto = self
         cell.setMemberCell(member: self.users[indexPath.row]!)
         return cell
     }
@@ -62,5 +75,78 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func didTapBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func photoTapped() {
+        self.performSegue(withIdentifier: "profileSegue", sender: nil)
+    }
+    
+    func showActivityIndicatory() {
+        let container: UIView = UIView()
+        container.frame = CGRect(x: 0, y: 0, width: 80, height: 80) // Set X and Y whatever you want
+        container.backgroundColor = .clear
 
+        activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+        activityView.center = self.view.center
+
+        container.addSubview(activityView)
+        self.view.addSubview(container)
+        activityView.startAnimating()
+    }
+    
+    func noRandUserAlert(){
+        let alert = UIAlertController(title: "User not Online", message: "Challenge not accepted", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          alert.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @objc func getRandUser(){
+        self.timeTrack += 1
+        if (self.randUser.object(forKey: "Looking") != nil) {
+                self.timer.invalidate()
+                self.activityView.stopAnimating()
+                self.performSegue(withIdentifier: "challengeSegue", sender: nil)
+            } else{
+                if (self.timeTrack == 20) {
+                    self.timer.invalidate()
+                    self.activityView.stopAnimating()
+                    self.timeTrack = 0
+                    self.noRandUserAlert()
+                    PFUser.current()?.setObject(false, forKey: "Looking")
+                    PFUser.current()?.saveInBackground()
+                }
+            }
+        self.randUser.fetchInBackground()
+    }
+    
+    func challengeBtnTapped() {
+        showActivityIndicatory()
+        PFUser.current()?.setObject(true, forKey: "Looking")
+        PFUser.current()?.saveInBackground()
+        self.timer = Timer.scheduledTimer(timeInterval: 1,
+            target: self,
+            selector: #selector(getRandUser),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "profileSgue"){
+            let profileController = segue.destination as! UsersProfileViewController
+            let tappedCell = sender as! UITableViewCell
+            let indexPath = self.tableView.indexPath(for: tappedCell)!
+            let user = self.users[indexPath.row] as! PFUser
+            profileController.user = user
+        } else if (segue.identifier == "challengeSegue"){
+            let challengeController = segue.destination as! GroupChallengeViewController
+            let tappedCell = sender as! UITableViewCell
+            let indexPath = self.tableView.indexPath(for: tappedCell)!
+            let user = self.users[indexPath.row] as! PFUser
+            challengeController.randomUser = user
+        }
+    }
 }
