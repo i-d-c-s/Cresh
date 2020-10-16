@@ -65,9 +65,9 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! GroupDetailCell
-        self.randUser = self.users[indexPath.row] as! PFUser
         cell.delegateBtn = self
         cell.delegatePhoto = self
+        cell.user = self.users[indexPath.row] as? PFUser
         cell.setMemberCell(member: self.users[indexPath.row]!)
         return cell
     }
@@ -76,8 +76,9 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.dismiss(animated: true, completion: nil)
     }
     
-    func photoTapped() {
-        self.performSegue(withIdentifier: "profileSegue", sender: nil)
+    func photoTapped(cell: GroupDetailCell, didTap: PFUser) {
+        self.randUser = didTap
+        self.performSegue(withIdentifier: "profileSegue", sender: randUser)
     }
     
     func showActivityIndicatory() {
@@ -109,7 +110,7 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
         if (self.randUser.object(forKey: "Looking") != nil) {
                 self.timer.invalidate()
                 self.activityView.stopAnimating()
-                self.performSegue(withIdentifier: "challengeSegue", sender: nil)
+                self.performSegue(withIdentifier: "challengeSegue", sender: self.randUser)
             } else{
                 if (self.timeTrack == 20) {
                     self.timer.invalidate()
@@ -123,7 +124,8 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
         self.randUser.fetchInBackground()
     }
     
-    func challengeBtnTapped() {
+    func challengeBtnTapped(cell: GroupDetailCell, didTap: PFUser) {
+        self.randUser = didTap
         showActivityIndicatory()
         PFUser.current()?.setObject(true, forKey: "Looking")
         PFUser.current()?.saveInBackground()
@@ -135,18 +137,12 @@ class GroupDetailViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "profileSgue"){
+        if (segue.identifier == "profileSegue"){
             let profileController = segue.destination as! UsersProfileViewController
-            let tappedCell = sender as! UITableViewCell
-            let indexPath = self.tableView.indexPath(for: tappedCell)!
-            let user = self.users[indexPath.row] as! PFUser
-            profileController.user = user
+            profileController.user = sender as? PFUser
         } else if (segue.identifier == "challengeSegue"){
             let challengeController = segue.destination as! GroupChallengeViewController
-            let tappedCell = sender as! UITableViewCell
-            let indexPath = self.tableView.indexPath(for: tappedCell)!
-            let user = self.users[indexPath.row] as! PFUser
-            challengeController.randomUser = user
+            challengeController.randomUser = sender as? PFUser
         }
     }
 }

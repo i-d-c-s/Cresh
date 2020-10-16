@@ -19,20 +19,18 @@ class GroupDetailCell: UITableViewCell {
     var delegatePhoto: myPhotoDelegate?
     var delegateBtn: myBtnDelegate?
     
+    var user: PFUser?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let photoTap = UITapGestureRecognizer.init(target: self, action: #selector(GroupDetailCell.tapPhoto(sender:)))
-        photoTap.numberOfTapsRequired = 2
+        let photoTap = UITapGestureRecognizer.init(target: self, action: #selector(tapPhoto(sender:)))
         self.profilePicture.addGestureRecognizer(photoTap)
         self.profilePicture.isUserInteractionEnabled = true
         
-        let btnTap = UITapGestureRecognizer.init(target: self, action: #selector(GroupDetailCell.tapPhoto(sender:)))
-        btnTap.numberOfTapsRequired = 1
+        let btnTap = UITapGestureRecognizer.init(target: self, action: #selector(tapBtn(sender:)))
         self.challengeButton.addGestureRecognizer(btnTap)
         self.challengeButton.isUserInteractionEnabled = true
-        
-        btnTap.shouldRequireFailure(of: photoTap)
         
     }
 
@@ -53,19 +51,19 @@ class GroupDetailCell: UITableViewCell {
     }
 
     @objc func tapPhoto(sender: UITapGestureRecognizer) {
-        delegatePhoto?.photoTapped()
+        delegatePhoto?.photoTapped(cell: self, didTap: user!)
        }
     
     @objc func tapBtn(sender: UITapGestureRecognizer) {
-        delegateBtn?.challengeBtnTapped()
+        delegateBtn?.challengeBtnTapped(cell: self, didTap: user!)
        }
     
 }
 
 protocol myPhotoDelegate {
-    func photoTapped()
+    func photoTapped(cell: GroupDetailCell, didTap: PFUser)
 }
 
 protocol myBtnDelegate {
-    func challengeBtnTapped()
+    func challengeBtnTapped(cell: GroupDetailCell, didTap: PFUser)
 }

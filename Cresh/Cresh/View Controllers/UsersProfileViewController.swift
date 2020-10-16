@@ -34,12 +34,11 @@ class UsersProfileViewController: UIViewController {
     }
     
     func populateView() {
-        
-        let imageData = user.object(forKey: "image")
+        let imageData = user.object(forKey: "image") as? PFFileObject
         self.profileImage.layer.cornerRadius = 72
         self.profileImage.layer.masksToBounds = true
         if (imageData != nil){
-            self.profileImage.file = (imageData as! PFFileObject)
+            self.profileImage.file = imageData
             self.profileImage.loadInBackground()
         }
         let username = user.username
