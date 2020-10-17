@@ -9,7 +9,7 @@
 ## Overview
 ### Description
 
-Can't sort with your colleagues due to virtual classes? Lucky you, Cresh's here to help with that! Cresh is a fitness social app that automatically keeps count of regular exercises done by athletes to prevent cheating or non performance of certain work outs and to enhance social activities within the athletic community thereby furthering the growth of college athletes around America.
+Can't sport with your colleagues due to virtual classes? Lucky you, Cresh's here to help with that! Cresh is a fitness social app that automatically keeps count of regular exercises done by athletes to prevent cheating or non performance of certain work outs and to enhance social activities within the athletic community thereby furthering the growth of physical education and sporting in America. This furthermore can be an outlet to connect not just the big brothers to their little brothers but the community as a whole virtually.
 
 
 
